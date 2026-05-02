@@ -1,0 +1,162 @@
+{
+  "common": {
+    "skipToMain": "Skip to main content"
+  },
+  "aria": {
+    "primaryNav": "Primary",
+    "footerNav": "Footer",
+    "language": "Site language"
+  },
+  "languageSwitcher": {
+    "english": "English",
+    "spanish": "Spanish"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "serviceAreas": "Service areas",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© {year} {business}. All rights reserved."
+  },
+  "meta": {
+    "root": {
+      "description": "Licensed plumbing for homes and businesses. Drains, water heaters, leaks, and emergencies. Call for service."
+    },
+    "home": {
+      "title": "Home",
+      "description": "{business} provides reliable plumbing across the San Fernando Valley and Los Angeles County. Call {phone}."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Plumbing services from {business}: drains, water heaters, leaks, fixtures, and more. {phone}."
+    },
+    "serviceAreas": {
+      "title": "Service areas",
+      "description": "{business} serves the San Fernando Valley and nearby Los Angeles County. Call {phone}."
+    },
+    "about": {
+      "title": "About",
+      "description": "Learn how {business} works with homeowners and businesses. {phone}."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact {business} by phone or mail. {phone}."
+    }
+  },
+  "home": {
+    "tagline": "Residential and commercial plumbing with clear communication and careful work. Same-day and emergency scheduling when available.",
+    "callCta": "Call {phone}",
+    "contactForm": "Contact form",
+    "servicesHeading": "What we handle",
+    "serviceItems": [
+      "Drain cleaning and sewer",
+      "Water heaters",
+      "Leak detection and repair",
+      "Toilets, faucets, and fixtures",
+      "Gas lines (where licensed)",
+      "Repiping and upgrades"
+    ],
+    "servicesLink": "Full services list",
+    "areasHeading": "Where we work",
+    "areasBody": "Based in the 818 area, we routinely serve the San Fernando Valley and nearby Los Angeles County communities.",
+    "areasLink": "Service areas"
+  },
+  "services": {
+    "heading": "Services",
+    "lead": "Scope and pricing are confirmed on site or after photos and a short phone consult. If we are not the right fit, we say so early.",
+    "footnote": "Not all work is available in every jurisdiction. Permits, inspections, and specialty trades are coordinated as required.",
+    "requestService": "Request service",
+    "groups": [
+      {
+        "id": "drains",
+        "title": "Drains and sewers",
+        "items": [
+          "Kitchen and bathroom drain cleaning",
+          "Main line stoppages",
+          "Hydro jetting (where appropriate)",
+          "Camera inspections"
+        ]
+      },
+      {
+        "id": "heaters",
+        "title": "Water heaters",
+        "items": [
+          "Tank and tankless installation",
+          "Repairs and maintenance",
+          "Pressure and temperature issues",
+          "Code-compliant venting and connections"
+        ]
+      },
+      {
+        "id": "leaks",
+        "title": "Leaks and piping",
+        "items": [
+          "Slab and hidden leak investigation",
+          "Supply line repairs",
+          "Repiping consultations",
+          "Shutoff valve replacement"
+        ]
+      },
+      {
+        "id": "fixtures",
+        "title": "Fixtures and appliances",
+        "items": [
+          "Toilets, faucets, disposals",
+          "Laundry boxes and ice maker lines",
+          "Dishwasher and appliance hookups"
+        ]
+      },
+      {
+        "id": "gas",
+        "title": "Gas plumbing",
+        "items": [
+          "Gas line sizing and installation where licensed and permitted",
+          "Earthquake shutoff coordination when required"
+        ]
+      },
+      {
+        "id": "commercial",
+        "title": "Commercial",
+        "items": [
+          "Restrooms and break rooms",
+          "Grease interceptor coordination with vendors",
+          "Preventive maintenance programs"
+        ]
+      }
+    ]
+  },
+  "serviceAreas": {
+    "heading": "Service areas",
+    "lead": "Dispatch is centered on the San Fernando Valley (818). Nearby Los Angeles County cities are often available; longer drive times may affect scheduling windows.",
+    "citiesHeading": "Cities we commonly serve",
+    "citiesNote": "List is illustrative, not exhaustive. Call with your address to confirm availability and same-day options.",
+    "sendAddress": "Send your address"
+  },
+  "about": {
+    "heading": "About",
+    "intro": "{business} focuses on predictable scheduling, tidy job sites, and options explained in plain language before work begins.",
+    "valuesHeading": "How we operate",
+    "values": [
+      "Written estimates when scope allows",
+      "Photos of findings when helpful",
+      "Permits pulled when code requires it",
+      "Respect for your time and property"
+    ],
+    "credentialsHeading": "Credentials placeholder",
+    "credentialsBody": "Add license numbers, bonding, insurance carrier, and years in business here when provided by ownership. This block is intentionally plain so legal and marketing can drop in final copy without fighting layout.",
+    "contactLink": "Contact"
+  },
+  "contact": {
+    "heading": "Contact",
+    "intro": "Fastest response is a phone call. For non-urgent questions, email works when you add your address and a short description.",
+    "phoneHeading": "Phone",
+    "hoursHeading": "Hours placeholder",
+    "hoursBody": "Replace with real dispatch hours and emergency policy. If you offer 24/7 emergency, state how after-hours fees are quoted.",
+    "mailHeading": "Mail placeholder",
+    "mailBody": "Add a mailing address or P.O. box for customers and vendors. Keeping this separate from the phone block preserves layout when the design team applies branding.",
+    "note": "{business} — contact page. No form yet to avoid spam and extra client JavaScript; add a server action or third-party form when ready."
+  }
+}

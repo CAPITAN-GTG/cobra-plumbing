@@ -1,65 +1,94 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { MainContainer } from "@/components/main-container";
+import { getTranslator } from "@/lib/i18n/server";
+import { BUSINESS_NAME, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 
-export default function Home() {
+const linkClass =
+  "font-medium text-accent-deep underline-offset-2 hover:text-accent hover:underline";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("meta.home.title"),
+    description: t("meta.home.description", {
+      business: BUSINESS_NAME,
+      phone: PHONE_DISPLAY,
+    }),
+    alternates: { canonical: "/" },
+  };
+}
+
+export default async function HomePage() {
+  const { t, messages } = await getTranslator();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <MainContainer>
+      <div className="flex flex-col gap-12 lg:gap-14">
+        <header className="flex max-w-3xl flex-col gap-5">
+          <h1 className="border-l-[3px] border-accent/50 pl-5 text-2xl font-semibold tracking-tight text-ink sm:text-3xl lg:text-4xl">
+            {BUSINESS_NAME}
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="max-w-2xl text-pretty text-lg text-ink-muted sm:text-xl">
+            {t("home.tagline")}
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <p className="flex flex-wrap items-center gap-3">
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className={`inline-flex min-h-[44px] items-center rounded-lg bg-accent/15 px-4 py-2 text-accent-deep ${linkClass} hover:bg-accent/20 sm:min-h-0`}
+            >
+              {t("home.callCta", { phone: PHONE_DISPLAY })}
+            </a>
+            <Link href="/contact" className={`inline-flex min-h-[44px] items-center ${linkClass} sm:min-h-0`}>
+              {t("home.contactForm")}
+            </Link>
+          </p>
+        </header>
+
+        <section aria-labelledby="home-services-heading" className="flex flex-col gap-5">
+          <h2
+            id="home-services-heading"
+            className="text-xl font-semibold tracking-tight text-ink sm:text-2xl"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+            {t("home.servicesHeading")}
+          </h2>
+          <ul className="grid list-none gap-3 p-0 sm:grid-cols-2 lg:grid-cols-3">
+            {messages.home.serviceItems.map((item) => (
+              <li
+                key={item}
+                className="rounded-xl border border-accent/15 bg-surface-card px-4 py-4 text-ink shadow-[0_1px_2px_rgba(30,42,58,0.04)]"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p>
+            <Link href="/services" className={linkClass}>
+              {t("home.servicesLink")}
+            </Link>
+          </p>
+        </section>
+
+        <section
+          aria-labelledby="home-areas-heading"
+          className="rounded-2xl border border-accent/15 bg-surface-card/80 p-6 sm:p-8"
+        >
+          <div className="flex max-w-3xl flex-col gap-4">
+            <h2
+              id="home-areas-heading"
+              className="text-xl font-semibold tracking-tight text-ink sm:text-2xl"
+            >
+              {t("home.areasHeading")}
+            </h2>
+            <p className="max-w-2xl text-pretty text-ink-muted">{t("home.areasBody")}</p>
+            <p>
+              <Link href="/service-areas" className={linkClass}>
+                {t("home.areasLink")}
+              </Link>
+            </p>
+          </div>
+        </section>
+      </div>
+    </MainContainer>
   );
 }

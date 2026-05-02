@@ -1,0 +1,162 @@
+{
+  "common": {
+    "skipToMain": "Saltar al contenido principal"
+  },
+  "aria": {
+    "primaryNav": "Principal",
+    "footerNav": "Pie de página",
+    "language": "Idioma del sitio"
+  },
+  "languageSwitcher": {
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "serviceAreas": "Zonas de servicio",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "copyright": "© {year} {business}. Todos los derechos reservados."
+  },
+  "meta": {
+    "root": {
+      "description": "Plomería con licencia para hogares y negocios. Desagües, calentadores, fugas y emergencias. Llame para servicio."
+    },
+    "home": {
+      "title": "Inicio",
+      "description": "{business} ofrece plomería confiable en el Valle de San Fernando y el condado de Los Ángeles. Llame al {phone}."
+    },
+    "services": {
+      "title": "Servicios",
+      "description": "Servicios de plomería de {business}: desagües, calentadores, fugas, accesorios y más. {phone}."
+    },
+    "serviceAreas": {
+      "title": "Zonas de servicio",
+      "description": "{business} atiende el Valle de San Fernando y comunidades cercanas del condado de Los Ángeles. Llame al {phone}."
+    },
+    "about": {
+      "title": "Nosotros",
+      "description": "Conozca cómo {business} trabaja con propietarios y negocios. {phone}."
+    },
+    "contact": {
+      "title": "Contacto",
+      "description": "Contacte a {business} por teléfono o correo. {phone}."
+    }
+  },
+  "home": {
+    "tagline": "Plomería residencial y comercial con comunicación clara y trabajo cuidadoso. Citas el mismo día y emergencias cuando haya disponibilidad.",
+    "callCta": "Llamar {phone}",
+    "contactForm": "Formulario de contacto",
+    "servicesHeading": "En qué podemos ayudar",
+    "serviceItems": [
+      "Limpieza de desagües y alcantarillado",
+      "Calentadores de agua",
+      "Detección y reparación de fugas",
+      "Inodoros, llaves y accesorios",
+      "Gas (donde haya licencia)",
+      "Re-tubería y mejoras"
+    ],
+    "servicesLink": "Lista completa de servicios",
+    "areasHeading": "Dónde trabajamos",
+    "areasBody": "Con base en el 818, atendemos con frecuencia el Valle de San Fernando y comunidades cercanas del condado de Los Ángeles.",
+    "areasLink": "Zonas de servicio"
+  },
+  "services": {
+    "heading": "Servicios",
+    "lead": "El alcance y el precio se confirman en sitio o tras fotos y una breve consulta por teléfono. Si no somos la mejor opción, se lo decimos pronto.",
+    "footnote": "No todo el trabajo está disponible en cada jurisdicción. Permisos, inspecciones y oficios especializados se coordinan según se requiera.",
+    "requestService": "Solicitar servicio",
+    "groups": [
+      {
+        "id": "drains",
+        "title": "Desagües y alcantarillado",
+        "items": [
+          "Destape de cocina y baño",
+          "Obstrucciones en línea principal",
+          "Hidrolavado (cuando aplique)",
+          "Inspecciones con cámara"
+        ]
+      },
+      {
+        "id": "heaters",
+        "title": "Calentadores de agua",
+        "items": [
+          "Instalación de tanque y sin tanque",
+          "Reparación y mantenimiento",
+          "Problemas de presión y temperatura",
+          "Ventilación y conexiones según código"
+        ]
+      },
+      {
+        "id": "leaks",
+        "title": "Fugas y tubería",
+        "items": [
+          "Investigación de fugas ocultas y bajo losa",
+          "Reparación de líneas de suministro",
+          "Consultas de re-tubería",
+          "Reemplazo de válvulas de cierre"
+        ]
+      },
+      {
+        "id": "fixtures",
+        "title": "Accesorios y electrodomésticos",
+        "items": [
+          "Inodoros, llaves, trituradores",
+          "Cajas de lavadora y líneas para hielo",
+          "Conexión de lavavajillas y electrodomésticos"
+        ]
+      },
+      {
+        "id": "gas",
+        "title": "Plomería de gas",
+        "items": [
+          "Dimensionado e instalación de gas con licencia y permiso",
+          "Coordinación de válvulas de cierre por sismo cuando aplique"
+        ]
+      },
+      {
+        "id": "commercial",
+        "title": "Comercial",
+        "items": [
+          "Baños y comedores",
+          "Coordinación de interceptores de grasa con proveedores",
+          "Programas de mantenimiento preventivo"
+        ]
+      }
+    ]
+  },
+  "serviceAreas": {
+    "heading": "Zonas de servicio",
+    "lead": "El despacho está centrado en el Valle de San Fernando (818). Ciudades cercanas del condado de Los Ángeles suelen estar disponibles; tiempos de traslado largos pueden afectar ventanas de agenda.",
+    "citiesHeading": "Ciudades que atendemos con frecuencia",
+    "citiesNote": "La lista es ilustrativa, no exhaustiva. Llame con su dirección para confirmar disponibilidad y opciones el mismo día.",
+    "sendAddress": "Enviar su dirección"
+  },
+  "about": {
+    "heading": "Nosotros",
+    "intro": "{business} se enfoca en citas predecibles, obra ordenada y opciones explicadas en lenguaje sencillo antes de comenzar.",
+    "valuesHeading": "Cómo trabajamos",
+    "values": [
+      "Estimados por escrito cuando el alcance lo permite",
+      "Fotos de hallazgos cuando ayudan",
+      "Permisos tramitados cuando el código lo exige",
+      "Respeto por su tiempo y su propiedad"
+    ],
+    "credentialsHeading": "Credenciales (pendiente)",
+    "credentialsBody": "Agregue aquí números de licencia, fianza, aseguradora y años en el negocio cuando la administración los proporcione. Este bloque es simple para que legal y marketing inserten el texto final sin complicar el diseño.",
+    "contactLink": "Contacto"
+  },
+  "contact": {
+    "heading": "Contacto",
+    "intro": "La respuesta más rápida es una llamada. Para preguntas no urgentes, el correo funciona si incluye su dirección y una breve descripción.",
+    "phoneHeading": "Teléfono",
+    "hoursHeading": "Horario (pendiente)",
+    "hoursBody": "Reemplace con horario real de despacho y política de emergencias. Si ofrece emergencias 24/7, indique cómo se cotizan tarifas fuera de horario.",
+    "mailHeading": "Correo (pendiente)",
+    "mailBody": "Agregue dirección postal o apartado para clientes y proveedores. Mantenerlo aparte del bloque de teléfono preserva el diseño cuando apliquen marca.",
+    "note": "{business} — página de contacto. Aún sin formulario para evitar spam y JavaScript extra del cliente; agregue una server action o formulario de terceros cuando esté listo."
+  }
+}
