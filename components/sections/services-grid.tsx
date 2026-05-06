@@ -24,23 +24,27 @@ type ServicesGridProps = {
   headingKey?: string;
   eyebrowKey?: string;
   showCta?: boolean;
+  showHeader?: boolean;
 };
 
 export async function ServicesGrid({
   headingKey = "services.heading",
   eyebrowKey = "services.eyebrow",
   showCta = true,
+  showHeader = true,
 }: ServicesGridProps) {
   const { t, messages } = await getTranslator();
 
   return (
-    <section className="section">
+    <section className={showHeader ? "section" : "section-narrow pt-6 md:pt-10"}>
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto mb-12 flex max-w-2xl flex-col items-center gap-3 text-center">
-          <span className="eyebrow">{t(eyebrowKey)}</span>
-          <h2 className="heading-section">{t(headingKey)}</h2>
-          <p className="text-pretty text-ink-muted">{t("services.lead")}</p>
-        </div>
+        {showHeader ? (
+          <div className="mx-auto mb-12 flex max-w-2xl flex-col items-center gap-3 text-center">
+            <span className="eyebrow">{t(eyebrowKey)}</span>
+            <h2 className="heading-section">{t(headingKey)}</h2>
+            <p className="text-pretty text-ink-muted">{t("services.lead")}</p>
+          </div>
+        ) : null}
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {messages.services.groups.map((group) => {
@@ -78,6 +82,11 @@ export async function ServicesGrid({
             );
           })}
         </div>
+        {!showHeader ? (
+          <p className="mx-auto mt-12 max-w-2xl text-center text-pretty text-ink-muted">
+            {t("services.lead")}
+          </p>
+        ) : null}
       </div>
     </section>
   );

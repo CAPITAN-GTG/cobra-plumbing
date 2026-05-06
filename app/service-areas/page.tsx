@@ -68,12 +68,15 @@ export default async function ServiceAreasPage() {
             </ul>
             <p className="text-sm text-ink-muted">{t("serviceAreas.citiesNote")}</p>
           </div>
-          <div
-            className="photo-slot min-h-[400px] w-full"
-            data-label={t("serviceAreas.mapPlaceholder")}
-            role="img"
-            aria-label="Service area map placeholder"
-          />
+          <div className="min-h-[400px] w-full overflow-hidden rounded-2xl border border-accent/20 shadow-md">
+            <iframe
+              title="Cobra Plumbing service area map"
+              src="https://maps.google.com/maps?q=San+Fernando+Valley%2C+CA&t=&z=10&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="h-full min-h-[400px] w-full border-0"
+            />
+          </div>
         </div>
       </section>
 

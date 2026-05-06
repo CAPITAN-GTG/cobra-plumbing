@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { PiPhoneCallFill, PiArrowRight } from "react-icons/pi";
 import { getTranslator } from "@/lib/i18n/server";
@@ -11,6 +12,7 @@ type HeroProps = {
   primaryHref?: string;
   primaryKey?: string;
   imageLabel?: string;
+  imageSrc?: string;
   variant?: "split" | "header";
 };
 
@@ -22,6 +24,7 @@ export async function Hero({
   primaryHref = "/contact",
   primaryKey = "hero.primaryCta",
   imageLabel,
+  imageSrc,
   variant = "split",
 }: HeroProps) {
   const { t } = await getTranslator();
@@ -68,18 +71,25 @@ export async function Hero({
 
         {isSplit ? (
           <div className="relative">
-            <div
-              className="photo-slot aspect-[5/4] w-full lg:aspect-[4/5]"
-              data-label={imageLabel ?? t("hero.imageLabel")}
-              role="img"
-              aria-label={t("hero.imageAlt")}
-            />
-            <div
-              className="photo-slot absolute -bottom-8 -left-6 hidden aspect-square w-44 sm:block"
-              data-label={t("hero.imageLabelInset")}
-              role="img"
-              aria-label={t("hero.imageAltInset")}
-            />
+            {imageSrc ? (
+              <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl shadow-xl lg:aspect-[4/5]">
+                <Image
+                  src={imageSrc}
+                  alt={t("hero.imageAlt")}
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 45vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            ) : (
+              <div
+                className="photo-slot aspect-[5/4] w-full lg:aspect-[4/5]"
+                data-label={imageLabel ?? t("hero.imageLabel")}
+                role="img"
+                aria-label={t("hero.imageAlt")}
+              />
+            )}
           </div>
         ) : null}
       </div>

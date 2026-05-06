@@ -4,7 +4,6 @@ import { CountersSection } from "@/components/sections/counters-section";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { Hero } from "@/components/sections/hero";
 import { ProcessStrip } from "@/components/sections/process-strip";
-import { ProjectGallery } from "@/components/sections/project-gallery";
 import { ServicesGrid } from "@/components/sections/services-grid";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { getTranslator } from "@/lib/i18n/server";
@@ -29,12 +28,12 @@ export default async function HomePage() {
         titleKey="hero.title"
         highlightKey="hero.highlight"
         subKey="hero.sub"
+        imageSrc="/photos/New Photos/Home Page - Hero Section.jpg"
       />
       <ServicesGrid />
       <CountersSection />
       <ProcessStrip />
       <BeforeAfterSection />
-      <ProjectGallery />
       <TestimonialsSection />
       <CtaBanner />
     </>

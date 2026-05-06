@@ -62,14 +62,14 @@ export function BeforeAfter({
           <ReactCompareSliderImage
             src={beforeSrc ?? PLACEHOLDER_BEFORE}
             alt={`${alt} — ${beforeLabel}`}
-            style={{ aspectRatio: "4 / 3", objectFit: "cover" }}
+            style={{ aspectRatio: "9 / 16", objectFit: "cover" }}
           />
         }
         itemTwo={
           <ReactCompareSliderImage
             src={afterSrc ?? PLACEHOLDER_AFTER}
             alt={`${alt} — ${afterLabel}`}
-            style={{ aspectRatio: "4 / 3", objectFit: "cover" }}
+            style={{ aspectRatio: "9 / 16", objectFit: "cover" }}
           />
         }
       />
@@ -77,13 +77,13 @@ export function BeforeAfter({
         <img
           src={afterSrc ?? PLACEHOLDER_AFTER}
           alt={alt}
-          style={{ aspectRatio: "4 / 3", width: "100%", objectFit: "cover", display: "block" }}
+          style={{ aspectRatio: "9 / 16", width: "100%", objectFit: "cover", display: "block" }}
         />
       )}
-      <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-ink-deep/80 px-3 py-1 text-xs font-bold uppercase tracking-widest text-white">
+      <span className="pointer-events-none absolute left-3 top-3 z-20 rounded-full bg-ink-deep/85 px-3 py-1 text-xs font-bold uppercase tracking-widest text-white shadow-md">
         {beforeLabel}
       </span>
-      <span className="pointer-events-none absolute right-3 top-3 rounded-full bg-accent-warm px-3 py-1 text-xs font-bold uppercase tracking-widest text-white">
+      <span className="pointer-events-none absolute right-3 top-3 z-20 rounded-full bg-accent-warm px-3 py-1 text-xs font-bold uppercase tracking-widest text-white shadow-md">
         {afterLabel}
       </span>
     </div>

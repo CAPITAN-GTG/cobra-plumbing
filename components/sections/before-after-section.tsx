@@ -6,7 +6,7 @@ export async function BeforeAfterSection() {
 
   return (
     <section className="section">
-      <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-14 lg:px-8">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.5fr_1fr] lg:items-center lg:gap-14 lg:px-8">
         <div className="flex flex-col gap-4">
           <span className="eyebrow">{t("beforeAfter.eyebrow")}</span>
           <h2 className="heading-section">{t("beforeAfter.heading")}</h2>
@@ -26,11 +26,15 @@ export async function BeforeAfterSection() {
             </li>
           </ul>
         </div>
-        <BeforeAfter
-          alt={t("beforeAfter.imageAlt")}
-          beforeLabel={t("beforeAfter.beforeLabel")}
-          afterLabel={t("beforeAfter.afterLabel")}
-        />
+        <div className="mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-none">
+          <BeforeAfter
+            alt={t("beforeAfter.imageAlt")}
+            beforeLabel={t("beforeAfter.beforeLabel")}
+            afterLabel={t("beforeAfter.afterLabel")}
+            beforeSrc="/photos/New Photos/Before 1.jpg"
+            afterSrc="/photos/New Photos/After 2.jpg"
+          />
+        </div>
       </div>
     </section>
   );

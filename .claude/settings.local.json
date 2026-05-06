@@ -14,7 +14,10 @@
       "Bash(curl -sS -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/about)",
       "Bash(curl -sS -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/services)",
       "Bash(curl -sS -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/service-areas)",
-      "Bash(curl -sS -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/contact)"
+      "Bash(curl -sS -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/contact)",
+      "Bash(python -c 'from PIL import Image; import os *)",
+      "Bash(identify \"Before 1.jpg\" \"After 2.jpg\")",
+      "PowerShell($names = @\\('Before 1.jpg','After 2.jpg','Home Page - Hero Section.jpg'\\); Add-Type -AssemblyName System.Drawing; foreach\\($n in $names\\){ $p = Join-Path 'public\\\\photos\\\\New Photos' $n; if\\(Test-Path $p\\){ $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $p\\)\\); \"$n  $\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\) } })"
     ]
   }
 }
