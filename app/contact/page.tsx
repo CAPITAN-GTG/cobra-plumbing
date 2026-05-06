@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { MainContainer } from "@/components/main-container";
+import {
+  PiClockFill,
+  PiEnvelopeSimpleFill,
+  PiMapPinFill,
+  PiPhoneCallFill,
+} from "react-icons/pi";
+import { ContactForm } from "@/components/contact-form";
+import { CtaBanner } from "@/components/sections/cta-banner";
+import { PageHeader } from "@/components/sections/page-header";
 import { getTranslator } from "@/lib/i18n/server";
 import { BUSINESS_NAME, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
-
-const linkClass =
-  "font-medium text-accent-deep underline-offset-2 hover:text-accent hover:underline";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
@@ -19,57 +24,81 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ContactPage() {
-  const { t } = await getTranslator();
+  const { t, messages } = await getTranslator();
 
   return (
-    <MainContainer>
-      <article className="flex flex-col gap-10 lg:flex-row lg:gap-14">
-        <div className="flex flex-1 flex-col gap-8">
-          <header className="flex flex-col gap-4">
-            <h1 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-              {t("contact.heading")}
-            </h1>
-            <p className="text-pretty text-lg text-ink-muted sm:text-xl">{t("contact.intro")}</p>
-          </header>
+    <>
+      <PageHeader
+        eyebrowKey="hero.eyebrow"
+        titleKey="hero.contactTitle"
+        subKey="hero.contactSub"
+      />
 
-          <section
-            aria-labelledby="contact-phone"
-            className="flex flex-col gap-3 rounded-2xl border border-accent/15 bg-surface-card p-6 sm:p-7"
-          >
-            <h2 id="contact-phone" className="text-lg font-semibold text-ink">
-              {t("contact.phoneHeading")}
-            </h2>
-            <p>
-              <a
-                href={`tel:${PHONE_TEL}`}
-                className={`inline-flex min-h-[44px] items-center text-lg ${linkClass} sm:min-h-0`}
-              >
-                {PHONE_DISPLAY}
-              </a>
-            </p>
-          </section>
+      <section className="section">
+        <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.2fr] lg:gap-14 lg:px-8">
+          <div className="flex flex-col gap-6">
+            <p className="text-pretty text-ink-muted">{t("contact.intro")}</p>
 
-          <section aria-labelledby="contact-hours" className="flex flex-col gap-3">
-            <h2 id="contact-hours" className="text-lg font-semibold text-ink">
-              {t("contact.hoursHeading")}
-            </h2>
-            <p className="max-w-xl text-pretty text-ink-muted">{t("contact.hoursBody")}</p>
-          </section>
+            <ul className="flex flex-col gap-4">
+              <li className="flex items-start gap-4 rounded-2xl border border-accent/15 bg-surface-card p-5">
+                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-warm-tint text-accent-warm">
+                  <PiPhoneCallFill size={22} aria-hidden />
+                </span>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-ink-muted">
+                    {t("contact.phoneHeading")}
+                  </p>
+                  <a
+                    href={`tel:${PHONE_TEL}`}
+                    className="text-lg font-bold text-ink-deep hover:text-accent-warm"
+                  >
+                    {PHONE_DISPLAY}
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-4 rounded-2xl border border-accent/15 bg-surface-card p-5">
+                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-warm-tint text-accent-warm">
+                  <PiClockFill size={22} aria-hidden />
+                </span>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-ink-muted">
+                    {t("contact.hoursHeading")}
+                  </p>
+                  <p className="text-sm text-ink">{t("contact.hoursBody")}</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-4 rounded-2xl border border-accent/15 bg-surface-card p-5">
+                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-warm-tint text-accent-warm">
+                  <PiMapPinFill size={22} aria-hidden />
+                </span>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-ink-muted">
+                    {t("contact.mailHeading")}
+                  </p>
+                  <p className="text-sm text-ink">{t("contact.mailBody")}</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-4 rounded-2xl border border-accent/15 bg-surface-card p-5">
+                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-warm-tint text-accent-warm">
+                  <PiEnvelopeSimpleFill size={22} aria-hidden />
+                </span>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-ink-muted">
+                    {BUSINESS_NAME}
+                  </p>
+                  <p className="text-sm text-ink-muted">
+                    {t("contact.note", { business: BUSINESS_NAME })}
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <ContactForm labels={messages.contact.form} />
         </div>
+      </section>
 
-        <section
-          aria-labelledby="contact-mail"
-          className="flex flex-1 flex-col gap-4 rounded-2xl border border-accent/15 bg-surface-card p-6 sm:p-8 lg:max-w-md"
-        >
-          <h2 id="contact-mail" className="text-lg font-semibold text-ink">
-            {t("contact.mailHeading")}
-          </h2>
-          <p className="text-pretty text-ink-muted">{t("contact.mailBody")}</p>
-          <p className="text-pretty text-sm text-ink-muted">
-            {t("contact.note", { business: BUSINESS_NAME })}
-          </p>
-        </section>
-      </article>
-    </MainContainer>
+      <CtaBanner />
+    </>
   );
 }

@@ -1,14 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  /* Pastel shell */
+  /* Surfaces */
   --color-surface: #eef5fb;
   --color-surface-card: #ffffff;
+  --color-surface-tint: rgba(106, 159, 208, 0.08);
+  --color-warm-tint: rgba(255, 102, 0, 0.08);
+
+  /* Ink */
   --color-ink: #1e2a3a;
   --color-ink-muted: #5c6b7d;
-  /* Accent: soft blue, still usable on white for links */
+  --color-ink-deep: #0f1a2b;
+
+  /* Accents */
   --color-accent: #6a9fd0;
   --color-accent-deep: #4d84b8;
+  --color-accent-warm: #ff6600;
+  --color-accent-warm-deep: #e55a00;
+
+  /* Type */
+  --font-sans: var(--font-oxygen), system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 *,
@@ -23,8 +35,7 @@ html {
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-    sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.55;
 }
 
@@ -38,7 +49,6 @@ body {
   outline-offset: 2px;
 }
 
-/* Screen-reader-only skip link target */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -66,4 +76,230 @@ body {
   background: var(--color-surface-card);
   border: 2px solid var(--color-accent-deep);
   color: var(--color-ink);
+}
+
+/* ---------- Hadiman-inspired utility layer ---------- */
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.75rem 1.4rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    transition: background-color 200ms ease, color 200ms ease,
+      box-shadow 200ms ease, transform 200ms ease;
+    background: var(--color-accent-deep);
+    color: #fff;
+    box-shadow: 0 6px 18px -8px rgba(77, 132, 184, 0.55);
+  }
+  .btn:hover {
+    background: var(--color-ink-deep);
+    color: #fff;
+  }
+
+  .btn-warm {
+    background: var(--color-accent-warm);
+    color: #fff;
+    box-shadow: 0 6px 18px -8px rgba(255, 102, 0, 0.6);
+  }
+  .btn-warm:hover {
+    background: var(--color-accent-warm-deep);
+    color: #fff;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--color-ink);
+    border: 1.5px solid color-mix(in oklab, var(--color-ink) 16%, transparent);
+    box-shadow: none;
+  }
+  .btn-outline:hover {
+    background: var(--color-ink-deep);
+    color: #fff;
+    border-color: var(--color-ink-deep);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--color-ink);
+    box-shadow: none;
+  }
+  .btn-ghost:hover {
+    background: var(--color-surface-tint);
+    color: var(--color-accent-deep);
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-accent-warm);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background: currentColor;
+  }
+
+  /* Animated underline brush stroke (Hadiman has-line) */
+  .has-line {
+    position: relative;
+    display: inline-block;
+  }
+  .has-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.05em;
+    height: 0.35em;
+    width: 100%;
+    background: color-mix(in oklab, var(--color-accent-warm) 40%, transparent);
+    z-index: -1;
+    border-radius: 2px;
+    transform-origin: left;
+    animation: has-line-grow 900ms cubic-bezier(0.65, 0, 0.35, 1) 200ms both;
+  }
+  @keyframes has-line-grow {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: var(--color-surface-tint);
+    color: var(--color-accent-deep);
+    border: 1px solid color-mix(in oklab, var(--color-accent) 30%, transparent);
+  }
+  .tag-warm {
+    background: var(--color-warm-tint);
+    color: var(--color-accent-warm-deep);
+    border-color: color-mix(in oklab, var(--color-accent-warm) 35%, transparent);
+  }
+
+  .section {
+    padding-block: 3.5rem;
+  }
+  @media (min-width: 768px) {
+    .section {
+      padding-block: 5.5rem;
+    }
+  }
+
+  .section-narrow {
+    padding-block: 2.5rem;
+  }
+  @media (min-width: 768px) {
+    .section-narrow {
+      padding-block: 3.5rem;
+    }
+  }
+
+  .section-dark {
+    background: var(--color-ink-deep);
+    color: #e6ecf3;
+  }
+  .section-dark h1,
+  .section-dark h2,
+  .section-dark h3 {
+    color: #fff;
+  }
+
+  .heading-display {
+    font-size: clamp(1.875rem, 3.6vw, 2.75rem);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--color-ink-deep);
+  }
+  .heading-section {
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    color: var(--color-ink-deep);
+  }
+
+  /* Card hover tint, used by service cards / project cards */
+  .card-tilt {
+    transition: transform 300ms ease, box-shadow 300ms ease,
+      border-color 200ms ease;
+  }
+  .card-tilt:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px -22px rgba(15, 26, 43, 0.35);
+  }
+
+  /* Shimmery decorative blob for hero / section backgrounds */
+  .blob {
+    position: absolute;
+    inset: auto;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  /* Image-slot placeholder pattern for empty photo containers */
+  .photo-slot {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    background: linear-gradient(
+        135deg,
+        color-mix(in oklab, var(--color-accent) 18%, white) 0%,
+        color-mix(in oklab, var(--color-accent) 6%, white) 100%
+      ),
+      repeating-linear-gradient(
+        45deg,
+        transparent 0 12px,
+        color-mix(in oklab, var(--color-accent) 14%, white) 12px 13px
+      );
+    background-blend-mode: multiply;
+    color: var(--color-accent-deep);
+  }
+  .photo-slot::after {
+    content: attr(data-label);
+    position: absolute;
+    inset: auto 1rem 1rem auto;
+    padding: 0.4rem 0.75rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--color-accent-deep);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+
+/* Swiper pagination accent override (orange dots) */
+.swiper-pagination-bullet-active {
+  background: var(--color-accent-warm) !important;
+}
+
+/* react-compare-slider handle accent */
+[data-rcs="root"] [data-rcs="handle-container"] button {
+  background: var(--color-accent-warm) !important;
+  color: #fff !important;
 }

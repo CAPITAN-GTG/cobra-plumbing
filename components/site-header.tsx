@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PiPhoneCallFill } from "react-icons/pi";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { MobileNav } from "@/components/mobile-nav";
 import { NAV_ITEMS } from "@/lib/i18n/nav";
 import { getTranslator } from "@/lib/i18n/server";
 import { BUSINESS_NAME, LOGO_SRC, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
@@ -8,47 +10,69 @@ import { BUSINESS_NAME, LOGO_SRC, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 export async function SiteHeader() {
   const { t } = await getTranslator();
 
-  return (
-    <header className="border-b border-accent/20 bg-surface-card/90 backdrop-blur-sm">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-4 lg:px-8">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-8">
+  const navList = (
+    <ul className="flex flex-col gap-1 md:flex-row md:items-center md:gap-1">
+      {NAV_ITEMS.map(({ href, key }) => (
+        <li key={href}>
           <Link
-            href="/"
-            aria-label={`${BUSINESS_NAME} — ${t("nav.home")}`}
-            className="inline-flex min-h-[44px] min-w-[44px] shrink-0 items-center sm:min-h-0 sm:min-w-0"
+            href={href}
+            className="inline-flex min-h-[44px] items-center rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-ink hover:text-accent-warm md:py-1.5"
           >
-            <Image
-              src={LOGO_SRC}
-              alt=""
-              width={220}
-              height={70}
-              className="h-14 w-auto sm:h-16"
-              priority
-            />
+            {t(key)}
           </Link>
+        </li>
+      ))}
+    </ul>
+  );
+
+  return (
+    <header className="sticky top-0 z-30 border-b border-accent/15 bg-surface-card/95 backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
+        <Link
+          href="/"
+          aria-label={`${BUSINESS_NAME} — ${t("nav.home")}`}
+          className="inline-flex shrink-0 items-center"
+        >
+          <Image
+            src={LOGO_SRC}
+            alt=""
+            width={220}
+            height={70}
+            className="h-12 w-auto sm:h-14"
+            priority
+          />
+        </Link>
+
+        <nav aria-label={t("aria.primaryNav")} className="ml-6 hidden md:block">
+          {navList}
+        </nav>
+
+        <div className="ml-auto flex items-center gap-3">
+          <div className="hidden lg:block">
+            <LanguageSwitcher />
+          </div>
           <a
             href={`tel:${PHONE_TEL}`}
-            className="min-h-[44px] min-w-[44px] content-center text-base font-medium text-accent-deep underline-offset-4 hover:text-accent hover:underline sm:min-h-0 sm:min-w-0"
+            className="btn btn-warm hidden sm:inline-flex"
           >
-            {PHONE_DISPLAY}
+            <PiPhoneCallFill aria-hidden size={18} />
+            <span>{PHONE_DISPLAY}</span>
           </a>
-        </div>
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end sm:gap-4">
-          <LanguageSwitcher />
-          <nav aria-label={t("aria.primaryNav")}>
-            <ul className="flex flex-wrap gap-x-1 gap-y-1 sm:justify-end sm:gap-x-0.5">
-              {NAV_ITEMS.map(({ href, key }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className="inline-flex min-h-[44px] items-center rounded-md px-2.5 text-ink underline-offset-4 hover:bg-accent/10 hover:text-accent-deep sm:min-h-0 sm:px-3 sm:py-1.5"
-                  >
-                    {t(key)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <a
+            href={`tel:${PHONE_TEL}`}
+            aria-label={t("home.callCta", { phone: PHONE_DISPLAY })}
+            className="btn btn-warm sm:hidden h-11 w-11 px-0 py-0"
+          >
+            <PiPhoneCallFill aria-hidden size={18} />
+          </a>
+          <MobileNav label={t("aria.primaryNav")}>
+            <div className="flex flex-col gap-4">
+              <nav aria-label={t("aria.primaryNav")}>{navList}</nav>
+              <div className="border-t border-accent/15 pt-4">
+                <LanguageSwitcher />
+              </div>
+            </div>
+          </MobileNav>
         </div>
       </div>
     </header>

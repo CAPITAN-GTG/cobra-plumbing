@@ -19,7 +19,14 @@
     "contact": "Contacto"
   },
   "footer": {
-    "copyright": "© {year} {business}. Todos los derechos reservados."
+    "copyright": "© {year} {business}. Todos los derechos reservados.",
+    "blurb": "{business} es un plomero con licencia del Valle de San Fernando que atiende a propietarios y negocios con respuesta el mismo día y emergencias.",
+    "quickLinks": "Enlaces rápidos",
+    "servicesHeading": "Servicios",
+    "contactHeading": "Contáctenos",
+    "serviceAreaLine": "Atendemos el Valle de San Fernando y el condado de Los Ángeles cercano",
+    "emailCta": "Envíenos un mensaje",
+    "licenseLine": "Con licencia · Afianzado · Asegurado"
   },
   "meta": {
     "root": {
@@ -46,6 +53,25 @@
       "description": "Contacte a {business} por teléfono o correo. {phone}."
     }
   },
+  "hero": {
+    "eyebrow": "Plomeros locales de confianza",
+    "title": "Plomería bien hecha —",
+    "highlight": "a la primera.",
+    "sub": "Plomería residencial y comercial en el Valle de San Fernando. Estimados claros, obra ordenada y citas el mismo día cuando hay disponibilidad.",
+    "primaryCta": "Solicitar cotización",
+    "imageLabel": "Trabajo terminado",
+    "imageLabelInset": "En obra",
+    "imageAlt": "Foto de plomería terminada — marcador hasta agregar foto real",
+    "imageAltInset": "Foto del plomero trabajando — marcador",
+    "aboutTitle": "Nosotros",
+    "aboutSub": "Cómo manejamos las obras, comunicamos y mantenemos su propiedad limpia desde la llegada hasta la limpieza.",
+    "servicesTitle": "Nuestros servicios",
+    "servicesSub": "Desde una llave goteando hasta una re-tubería completa — manejamos plomería para hogares y negocios.",
+    "areasTitle": "Dónde trabajamos",
+    "areasSub": "Con base en el 818, cubrimos el Valle de San Fernando y comunidades cercanas del condado de Los Ángeles.",
+    "contactTitle": "Contacto",
+    "contactSub": "Llame ahora o envíe un mensaje — respondemos rápido y cotizamos con claridad."
+  },
   "home": {
     "tagline": "Plomería residencial y comercial con comunicación clara y trabajo cuidadoso. Citas el mismo día y emergencias cuando haya disponibilidad.",
     "callCta": "Llamar {phone}",
@@ -66,9 +92,11 @@
   },
   "services": {
     "heading": "Servicios",
+    "eyebrow": "Lo que hacemos",
     "lead": "El alcance y el precio se confirman en sitio o tras fotos y una breve consulta por teléfono. Si no somos la mejor opción, se lo decimos pronto.",
     "footnote": "No todo el trabajo está disponible en cada jurisdicción. Permisos, inspecciones y oficios especializados se coordinan según se requiera.",
     "requestService": "Solicitar servicio",
+    "cardCta": "Más información",
     "groups": [
       {
         "id": "drains",
@@ -133,7 +161,8 @@
     "lead": "El despacho está centrado en el Valle de San Fernando (818). Ciudades cercanas del condado de Los Ángeles suelen estar disponibles; tiempos de traslado largos pueden afectar ventanas de agenda.",
     "citiesHeading": "Ciudades que atendemos con frecuencia",
     "citiesNote": "La lista es ilustrativa, no exhaustiva. Llame con su dirección para confirmar disponibilidad y opciones el mismo día.",
-    "sendAddress": "Enviar su dirección"
+    "sendAddress": "Enviar su dirección",
+    "mapPlaceholder": "Marcador del mapa — inserte aquí un mapa de cobertura."
   },
   "about": {
     "heading": "Nosotros",
@@ -147,16 +176,142 @@
     ],
     "credentialsHeading": "Credenciales (pendiente)",
     "credentialsBody": "Agregue aquí números de licencia, fianza, aseguradora y años en el negocio cuando la administración los proporcione. Este bloque es simple para que legal y marketing inserten el texto final sin complicar el diseño.",
-    "contactLink": "Contacto"
+    "contactLink": "Contacto",
+    "whyHeading": "Por qué Cobra",
+    "whyLead": "Cuatro hábitos que hacen que nuestras obras corran mejor que las del próximo plomero.",
+    "whyItems": [
+      {
+        "title": "Llegadas puntuales",
+        "body": "Ventanas de cita ajustadas y una llamada antes de llegar."
+      },
+      {
+        "title": "Áreas de trabajo limpias",
+        "body": "Protección de pisos, lonas y un recorrido real al final."
+      },
+      {
+        "title": "Cotizaciones claras",
+        "body": "Explicamos opciones y diferencias antes de tomar la herramienta."
+      },
+      {
+        "title": "Trabajo respaldado",
+        "body": "Si algo que hicimos falla pronto, regresamos y lo corregimos."
+      }
+    ]
   },
   "contact": {
     "heading": "Contacto",
-    "intro": "La respuesta más rápida es una llamada. Para preguntas no urgentes, el correo funciona si incluye su dirección y una breve descripción.",
+    "intro": "La respuesta más rápida es una llamada. Para preguntas no urgentes, el formulario en esta página llega a nosotros por correo.",
     "phoneHeading": "Teléfono",
     "hoursHeading": "Horario (pendiente)",
     "hoursBody": "Reemplace con horario real de despacho y política de emergencias. Si ofrece emergencias 24/7, indique cómo se cotizan tarifas fuera de horario.",
     "mailHeading": "Correo (pendiente)",
     "mailBody": "Agregue dirección postal o apartado para clientes y proveedores. Mantenerlo aparte del bloque de teléfono preserva el diseño cuando apliquen marca.",
-    "note": "{business} — página de contacto. Aún sin formulario para evitar spam y JavaScript extra del cliente; agregue una server action o formulario de terceros cuando esté listo."
+    "note": "{business} — respuesta rápida en trabajos de plomería reales. El formulario abajo llega directo a nuestro buzón.",
+    "form": {
+      "heading": "Enviar un mensaje",
+      "lead": "Cuéntenos qué pasa. Fotos, dirección y una breve descripción nos ayudan a cotizar más rápido.",
+      "name": "Su nombre",
+      "email": "Correo",
+      "phone": "Teléfono",
+      "address": "Dirección (opcional)",
+      "message": "¿Cuál es el problema?",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando…",
+      "success": "Gracias — lo recibimos. Le contactaremos pronto.",
+      "errorGeneric": "Algo salió mal. Por favor llámenos directamente.",
+      "errorRequired": "Complete los campos requeridos.",
+      "errorEmail": "Ingrese un correo válido.",
+      "honeypot": "Deje este campo vacío"
+    }
+  },
+  "process": {
+    "eyebrow": "Cómo trabajamos",
+    "heading": "De su llamada al visto bueno",
+    "lead": "Cuatro pasos. Sin sorpresas. Le decimos qué encontramos, cuánto cuesta y qué cambia — antes de empezar.",
+    "steps": {
+      "call": {
+        "title": "1. Llame o escriba",
+        "body": "Cuéntenos qué pasa. Priorizamos la urgencia y reservamos la próxima cita disponible."
+      },
+      "diagnose": {
+        "title": "2. Diagnóstico en sitio",
+        "body": "Llegamos, aislamos el problema y le explicamos los hallazgos con fotos cuando ayuda."
+      },
+      "fix": {
+        "title": "3. Cotizado y reparado",
+        "body": "Cotización por escrito con opciones claras. Una vez aprobada, manos a la obra y todo limpio."
+      },
+      "guarantee": {
+        "title": "4. Probado y garantizado",
+        "body": "Pruebas finales, recorrido y promesa que respalda la mano de obra."
+      }
+    }
+  },
+  "counters": {
+    "eyebrow": "En números",
+    "heading": "Construido sobre trabajos bien hechos",
+    "years": "Años en el oficio",
+    "jobs": "Trabajos completados",
+    "response": "Respuesta de emergencia",
+    "licensed": "Con licencia y seguro"
+  },
+  "cta": {
+    "eyebrow": "¿Necesita un plomero ya?",
+    "heading": "Tubería rota, sin agua caliente, desagüe tapado — llámenos.",
+    "body": "Visitas el mismo día cuando hay disponibilidad. Atención humana real en horario laboral."
+  },
+  "beforeAfter": {
+    "eyebrow": "Antes y después",
+    "heading": "Lo dejamos más limpio de como lo encontramos",
+    "body": "Arrastre el deslizador para ver cómo termina un trabajo típico — de áspero a terminado, la obra siempre bajo control.",
+    "bullet1": "Pisos y mostradores protegidos desde el primer día",
+    "bullet2": "Accesorios viejos retirados, escombros despejados",
+    "bullet3": "Recorrido final antes de cobrar",
+    "imageAlt": "Antes y después de un trabajo de Cobra Plumbing — marcador",
+    "beforeLabel": "Antes",
+    "afterLabel": "Después"
+  },
+  "gallery": {
+    "eyebrow": "Trabajos recientes",
+    "heading": "Trabajos reales, resultados reales",
+    "body": "Una mezcla de instalaciones terminadas, condiciones difíciles que a veces heredamos, y tomas de cómo mantenemos las áreas limpias mientras la obra avanza.",
+    "bucketFinished": "Terminado",
+    "bucketRough": "Trabajos difíciles",
+    "bucketClean": "Limpio y profesional",
+    "placeholderNote": "Marcadores de imagen — reemplace con fotos reales en public/photos/.",
+    "items": {
+      "kitchen-rebuild": "Reconstrucción del fregadero — terminado",
+      "rough-1": "Línea corroída encontrada detrás del muro",
+      "clean-bay": "Banco preparado y etiquetado antes de instalar",
+      "water-heater": "Reemplazo de calentador — terminado",
+      "rough-2": "Registro tapado al llegar",
+      "fixture-install": "Instalación de accesorio — lonas y herramientas listas"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Lo que dicen los clientes",
+    "heading": "Confianza en todo el Valle",
+    "items": [
+      {
+        "quote": "Llegaron a tiempo, nos dijeron qué pasaba y lo arreglaron la misma tarde. Dejaron todo más limpio que como llegaron.",
+        "author": "María G.",
+        "city": "Burbank"
+      },
+      {
+        "quote": "Cotizaron tres opciones antes de empezar — sin sorpresas en la factura final. Volveré a llamarlos.",
+        "author": "Daniel R.",
+        "city": "Sherman Oaks"
+      },
+      {
+        "quote": "Respuesta rápida ante una fuga que casi nos cuesta una remodelación. Muy recomendados.",
+        "author": "Karen P.",
+        "city": "Glendale"
+      },
+      {
+        "quote": "Honestos, justos, y contestaron el teléfono fuera de horario. Eso es raro.",
+        "author": "Aarón L.",
+        "city": "North Hollywood"
+      }
+    ]
   }
 }

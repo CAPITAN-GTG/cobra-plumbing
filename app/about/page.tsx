@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { MainContainer } from "@/components/main-container";
+import { CountersSection } from "@/components/sections/counters-section";
+import { CtaBanner } from "@/components/sections/cta-banner";
+import { PageHeader } from "@/components/sections/page-header";
+import { ProcessStrip } from "@/components/sections/process-strip";
 import { getTranslator } from "@/lib/i18n/server";
-import { BUSINESS_NAME, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
-
-const linkClass =
-  "font-medium text-accent-deep underline-offset-2 hover:text-accent hover:underline";
+import { BUSINESS_NAME, PHONE_DISPLAY } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
@@ -23,52 +22,92 @@ export default async function AboutPage() {
   const { t, messages } = await getTranslator();
 
   return (
-    <MainContainer>
-      <article className="flex max-w-3xl flex-col gap-10">
-        <header className="flex flex-col gap-4">
-          <h1 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-            {t("about.heading")}
-          </h1>
-          <p className="text-pretty text-lg text-ink-muted sm:text-xl">
-            {t("about.intro", { business: BUSINESS_NAME })}
-          </p>
-        </header>
+    <>
+      <PageHeader
+        eyebrowKey="hero.eyebrow"
+        titleKey="hero.aboutTitle"
+        subKey="hero.aboutSub"
+      />
 
-        <section
-          aria-labelledby="about-values"
-          className="flex flex-col gap-4 rounded-2xl border border-accent/15 bg-surface-card p-6 sm:p-8"
-        >
-          <h2 id="about-values" className="text-xl font-semibold tracking-tight text-ink">
-            {t("about.valuesHeading")}
-          </h2>
-          <ul className="list-disc space-y-2.5 pl-5 text-ink-muted marker:text-accent">
-            {messages.about.values.map((line) => (
-              <li key={line} className="text-ink">
-                {line}
-              </li>
+      <section className="section">
+        <div className="mx-auto grid w-full max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:items-start lg:gap-16 lg:px-8">
+          <div className="flex flex-col gap-6">
+            <span className="eyebrow">{t("about.heading")}</span>
+            <h2 className="heading-section">
+              {t("about.intro", { business: BUSINESS_NAME })}
+            </h2>
+            <div className="flex flex-col gap-4 text-ink-muted">
+              <h3 className="text-lg font-bold text-ink-deep">
+                {t("about.valuesHeading")}
+              </h3>
+              <ul className="flex flex-col gap-2">
+                {messages.about.values.map((line) => (
+                  <li key={line} className="flex items-start gap-2 text-ink">
+                    <span
+                      aria-hidden
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-warm"
+                    />
+                    <span>{line}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-4 rounded-2xl border border-accent/15 bg-surface-card p-6">
+                <h3 className="text-lg font-bold text-ink-deep">
+                  {t("about.credentialsHeading")}
+                </h3>
+                <p className="mt-2 text-sm">{t("about.credentialsBody")}</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div
+              className="photo-slot aspect-[4/5] w-full"
+              data-label={t("hero.imageLabel")}
+              role="img"
+              aria-label={t("hero.imageAlt")}
+            />
+            <div className="grid grid-cols-2 gap-4">
+              <div
+                className="photo-slot aspect-square"
+                data-label={t("gallery.bucketRough")}
+                role="img"
+                aria-label="Job-site placeholder"
+              />
+              <div
+                className="photo-slot aspect-square"
+                data-label={t("gallery.bucketClean")}
+                role="img"
+                aria-label="Job-site placeholder"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CountersSection />
+      <ProcessStrip />
+
+      <section className="section">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-12 flex max-w-2xl flex-col items-center gap-3 text-center">
+            <span className="eyebrow">{t("about.whyHeading")}</span>
+            <h2 className="heading-section">{t("about.whyLead")}</h2>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {messages.about.whyItems.map((item) => (
+              <article
+                key={item.title}
+                className="card-tilt flex flex-col gap-3 rounded-2xl border border-accent/15 bg-surface-card p-6"
+              >
+                <h3 className="text-lg font-bold text-ink-deep">{item.title}</h3>
+                <p className="text-sm text-ink-muted">{item.body}</p>
+              </article>
             ))}
-          </ul>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section aria-labelledby="about-credentials" className="flex flex-col gap-3">
-          <h2 id="about-credentials" className="text-xl font-semibold tracking-tight text-ink">
-            {t("about.credentialsHeading")}
-          </h2>
-          <p className="text-pretty text-ink-muted">{t("about.credentialsBody")}</p>
-        </section>
-
-        <p className="border-t border-accent/15 pt-8 text-ink-muted">
-          <a href={`tel:${PHONE_TEL}`} className={linkClass}>
-            {PHONE_DISPLAY}
-          </a>
-          <span className="mx-2 text-accent/40" aria-hidden="true">
-            ·
-          </span>
-          <Link href="/contact" className={linkClass}>
-            {t("about.contactLink")}
-          </Link>
-        </p>
-      </article>
-    </MainContainer>
+      <CtaBanner />
+    </>
   );
 }

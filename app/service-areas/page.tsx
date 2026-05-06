@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { MainContainer } from "@/components/main-container";
+import { PiMapPinFill } from "react-icons/pi";
+import { CtaBanner } from "@/components/sections/cta-banner";
+import { PageHeader } from "@/components/sections/page-header";
 import { getTranslator } from "@/lib/i18n/server";
-import { BUSINESS_NAME, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
+import { BUSINESS_NAME, PHONE_DISPLAY } from "@/lib/site";
 
-const linkClass =
-  "font-medium text-accent-deep underline-offset-2 hover:text-accent hover:underline";
-
-/** Representative 818 / SFV-adjacent cities; replace with your dispatch list. */
 const CITIES = [
   "Burbank",
   "Glendale",
@@ -41,45 +38,46 @@ export default async function ServiceAreasPage() {
   const { t } = await getTranslator();
 
   return (
-    <MainContainer>
-      <article className="flex flex-col gap-10">
-        <header className="flex max-w-3xl flex-col gap-4">
-          <h1 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-            {t("serviceAreas.heading")}
-          </h1>
-          <p className="text-pretty text-lg text-ink-muted sm:text-xl">{t("serviceAreas.lead")}</p>
-          <p>
-            <a href={`tel:${PHONE_TEL}`} className={linkClass}>
-              {PHONE_DISPLAY}
-            </a>
-          </p>
-        </header>
+    <>
+      <PageHeader
+        eyebrowKey="hero.eyebrow"
+        titleKey="hero.areasTitle"
+        subKey="hero.areasSub"
+      />
 
-        <section
-          aria-labelledby="cities-heading"
-          className="flex flex-col gap-5 rounded-2xl border border-accent/15 bg-surface-card p-6 sm:p-8"
-        >
-          <h2 id="cities-heading" className="text-xl font-semibold tracking-tight text-ink">
-            {t("serviceAreas.citiesHeading")}
-          </h2>
-          <ul className="columns-1 gap-x-8 text-ink sm:columns-2 lg:columns-3">
-            {CITIES.map((city) => (
-              <li key={city} className="break-inside-avoid py-1.5 text-sm sm:text-base">
-                {city}
-              </li>
-            ))}
-          </ul>
-          <p className="max-w-2xl text-pretty text-sm text-ink-muted">
-            {t("serviceAreas.citiesNote")}
-          </p>
-        </section>
+      <section className="section">
+        <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-14 lg:px-8">
+          <div className="flex flex-col gap-6">
+            <span className="eyebrow">{t("serviceAreas.heading")}</span>
+            <h2 className="heading-section">{t("serviceAreas.citiesHeading")}</h2>
+            <p className="text-pretty text-ink-muted">{t("serviceAreas.lead")}</p>
+            <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {CITIES.map((city) => (
+                <li
+                  key={city}
+                  className="card-tilt flex items-center gap-2 rounded-xl border border-accent/15 bg-surface-card px-3 py-3 text-sm text-ink"
+                >
+                  <PiMapPinFill
+                    aria-hidden
+                    size={16}
+                    className="shrink-0 text-accent-warm"
+                  />
+                  <span>{city}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm text-ink-muted">{t("serviceAreas.citiesNote")}</p>
+          </div>
+          <div
+            className="photo-slot min-h-[400px] w-full"
+            data-label={t("serviceAreas.mapPlaceholder")}
+            role="img"
+            aria-label="Service area map placeholder"
+          />
+        </div>
+      </section>
 
-        <p>
-          <Link href="/contact" className={linkClass}>
-            {t("serviceAreas.sendAddress")}
-          </Link>
-        </p>
-      </article>
-    </MainContainer>
+      <CtaBanner />
+    </>
   );
 }

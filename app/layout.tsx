@@ -1,10 +1,18 @@
 import type { Metadata, Viewport } from "next";
+import { Oxygen } from "next/font/google";
 import { LocalBusinessJsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getLocale, getTranslator } from "@/lib/i18n/server";
 import { BUSINESS_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
+
+const oxygen = Oxygen({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  display: "swap",
+  variable: "--font-oxygen",
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -33,7 +41,7 @@ export default async function RootLayout({
   const { t } = await getTranslator();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={oxygen.variable}>
       <body className="flex min-h-dvh flex-col bg-surface text-ink antialiased">
         <LocalBusinessJsonLd />
         <a href="#main-content" className="sr-only">

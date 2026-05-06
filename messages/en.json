@@ -19,7 +19,14 @@
     "contact": "Contact"
   },
   "footer": {
-    "copyright": "© {year} {business}. All rights reserved."
+    "copyright": "© {year} {business}. All rights reserved.",
+    "blurb": "{business} is a licensed San Fernando Valley plumber serving homeowners and businesses with same-day and emergency response.",
+    "quickLinks": "Quick links",
+    "servicesHeading": "Services",
+    "contactHeading": "Get in touch",
+    "serviceAreaLine": "Serving the San Fernando Valley & nearby LA County",
+    "emailCta": "Send us a message",
+    "licenseLine": "Licensed · Bonded · Insured"
   },
   "meta": {
     "root": {
@@ -46,6 +53,25 @@
       "description": "Contact {business} by phone or mail. {phone}."
     }
   },
+  "hero": {
+    "eyebrow": "Trusted local plumbers",
+    "title": "Plumbing done right —",
+    "highlight": "the first time.",
+    "sub": "Residential and commercial plumbing across the San Fernando Valley. Clear estimates, tidy job sites, and same-day scheduling when available.",
+    "primaryCta": "Get a free quote",
+    "imageLabel": "Finished work",
+    "imageLabelInset": "On the job",
+    "imageAlt": "Photo of completed plumbing work — placeholder until real photo is added",
+    "imageAltInset": "Photo of plumber at work — placeholder",
+    "aboutTitle": "About",
+    "aboutSub": "How we run jobs, communicate, and keep your property clean from arrival to clean-up.",
+    "servicesTitle": "Our services",
+    "servicesSub": "From a leaky faucet to a full repipe — we handle plumbing for homes and businesses.",
+    "areasTitle": "Where we work",
+    "areasSub": "Based in the 818, we cover the San Fernando Valley and nearby Los Angeles County communities.",
+    "contactTitle": "Contact",
+    "contactSub": "Call now or send a message — we respond fast and quote clearly."
+  },
   "home": {
     "tagline": "Residential and commercial plumbing with clear communication and careful work. Same-day and emergency scheduling when available.",
     "callCta": "Call {phone}",
@@ -66,9 +92,11 @@
   },
   "services": {
     "heading": "Services",
+    "eyebrow": "What we do",
     "lead": "Scope and pricing are confirmed on site or after photos and a short phone consult. If we are not the right fit, we say so early.",
     "footnote": "Not all work is available in every jurisdiction. Permits, inspections, and specialty trades are coordinated as required.",
     "requestService": "Request service",
+    "cardCta": "Learn more",
     "groups": [
       {
         "id": "drains",
@@ -133,7 +161,8 @@
     "lead": "Dispatch is centered on the San Fernando Valley (818). Nearby Los Angeles County cities are often available; longer drive times may affect scheduling windows.",
     "citiesHeading": "Cities we commonly serve",
     "citiesNote": "List is illustrative, not exhaustive. Call with your address to confirm availability and same-day options.",
-    "sendAddress": "Send your address"
+    "sendAddress": "Send your address",
+    "mapPlaceholder": "Map placeholder — drop in an embedded coverage map here."
   },
   "about": {
     "heading": "About",
@@ -147,16 +176,142 @@
     ],
     "credentialsHeading": "Credentials placeholder",
     "credentialsBody": "Add license numbers, bonding, insurance carrier, and years in business here when provided by ownership. This block is intentionally plain so legal and marketing can drop in final copy without fighting layout.",
-    "contactLink": "Contact"
+    "contactLink": "Contact",
+    "whyHeading": "Why Cobra",
+    "whyLead": "Four habits that make our jobs run smoother than the next plumber's.",
+    "whyItems": [
+      {
+        "title": "On-time arrivals",
+        "body": "Tight scheduling windows and a call-ahead before we roll up."
+      },
+      {
+        "title": "Clean work areas",
+        "body": "Floor protection, drop cloths, and a real walk-through at clean-up."
+      },
+      {
+        "title": "Plain-language quotes",
+        "body": "We explain options and trade-offs before we touch a wrench."
+      },
+      {
+        "title": "Stand-behind work",
+        "body": "If something we did fails early, we come back and make it right."
+      }
+    ]
   },
   "contact": {
     "heading": "Contact",
-    "intro": "Fastest response is a phone call. For non-urgent questions, email works when you add your address and a short description.",
+    "intro": "Fastest response is a phone call. For non-urgent questions, the form on this page reaches us by email.",
     "phoneHeading": "Phone",
     "hoursHeading": "Hours placeholder",
     "hoursBody": "Replace with real dispatch hours and emergency policy. If you offer 24/7 emergency, state how after-hours fees are quoted.",
     "mailHeading": "Mail placeholder",
     "mailBody": "Add a mailing address or P.O. box for customers and vendors. Keeping this separate from the phone block preserves layout when the design team applies branding.",
-    "note": "{business} — contact page. No form yet to avoid spam and extra client JavaScript; add a server action or third-party form when ready."
+    "note": "{business} — fast response on real plumbing jobs. The form below sends straight to our dispatch inbox.",
+    "form": {
+      "heading": "Send a message",
+      "lead": "Tell us what's going on. Photos, addresses, and a short description help us quote faster.",
+      "name": "Your name",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address (optional)",
+      "message": "What's the problem?",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thanks — we got it. We'll be in touch shortly.",
+      "errorGeneric": "Something went wrong. Please call us instead.",
+      "errorRequired": "Please fill in the required fields.",
+      "errorEmail": "Please enter a valid email address.",
+      "honeypot": "Leave this field empty"
+    }
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "heading": "From your call to the all-clear",
+    "lead": "Four steps. No surprises. We tell you what we found, what it costs, and what changes — before we start.",
+    "steps": {
+      "call": {
+        "title": "1. Call or message",
+        "body": "Tell us what's wrong. We'll triage urgency and book the next available slot."
+      },
+      "diagnose": {
+        "title": "2. On-site diagnosis",
+        "body": "We arrive, isolate the issue, and walk you through findings with photos when it helps."
+      },
+      "fix": {
+        "title": "3. Quoted, then fixed",
+        "body": "Written quote with clear options. Once you approve, we get to work and keep the site tidy."
+      },
+      "guarantee": {
+        "title": "4. Tested & guaranteed",
+        "body": "Final tests, walk-through, and a stand-behind promise on the workmanship."
+      }
+    }
+  },
+  "counters": {
+    "eyebrow": "By the numbers",
+    "heading": "Built on jobs done right",
+    "years": "Years in business",
+    "jobs": "Jobs completed",
+    "response": "Emergency response",
+    "licensed": "Licensed & insured"
+  },
+  "cta": {
+    "eyebrow": "Need a plumber now?",
+    "heading": "Burst pipe, no hot water, backed-up drain — call us.",
+    "body": "Same-day visits when available. Real humans answering during business hours."
+  },
+  "beforeAfter": {
+    "eyebrow": "Before & after",
+    "heading": "We leave it cleaner than we found it",
+    "body": "Drag the slider to see how a typical job comes together — from rough to finished, the work site stays under control.",
+    "bullet1": "Floors and counters protected on day one",
+    "bullet2": "Old fittings hauled out, debris cleared",
+    "bullet3": "Final walk-through before we collect payment",
+    "imageAlt": "Before and after of a Cobra Plumbing job — placeholder",
+    "beforeLabel": "Before",
+    "afterLabel": "After"
+  },
+  "gallery": {
+    "eyebrow": "Recent work",
+    "heading": "Real jobs, real results",
+    "body": "A mix of finished installs, the rough conditions we sometimes inherit, and shots of how we keep work areas clean while jobs are in flight.",
+    "bucketFinished": "Finished",
+    "bucketRough": "Rough jobs",
+    "bucketClean": "Clean & professional",
+    "placeholderNote": "Image placeholders — swap in real job-site photos under public/photos/.",
+    "items": {
+      "kitchen-rebuild": "Kitchen sink rebuild — finished",
+      "rough-1": "Old corroded line discovered behind drywall",
+      "clean-bay": "Workbench staged and labeled before install",
+      "water-heater": "Replacement water heater — finished",
+      "rough-2": "Backed-up cleanout on arrival",
+      "fixture-install": "Fixture install — drop cloth and tools laid out"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "What customers say",
+    "heading": "Trusted across the Valley",
+    "items": [
+      {
+        "quote": "Showed up on time, told us what was wrong, fixed it the same afternoon. Place was cleaner when they left than when they got here.",
+        "author": "Maria G.",
+        "city": "Burbank"
+      },
+      {
+        "quote": "Quoted three options before they started — no surprises on the final bill. Will call them again.",
+        "author": "Daniel R.",
+        "city": "Sherman Oaks"
+      },
+      {
+        "quote": "Fast response on a leak that was about to cost us a kitchen remodel. Highly recommended.",
+        "author": "Karen P.",
+        "city": "Glendale"
+      },
+      {
+        "quote": "Honest, fair, and they actually picked up the phone after hours. That's rare.",
+        "author": "Aaron L.",
+        "city": "North Hollywood"
+      }
+    ]
   }
 }
