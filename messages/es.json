@@ -162,7 +162,7 @@
     "citiesHeading": "Ciudades que atendemos con frecuencia",
     "citiesNote": "La lista es ilustrativa, no exhaustiva. Llame con su dirección para confirmar disponibilidad y opciones el mismo día.",
     "sendAddress": "Enviar su dirección",
-    "mapPlaceholder": "Marcador del mapa — inserte aquí un mapa de cobertura."
+    "allAreas": "Todas las zonas"
   },
   "about": {
     "heading": "Nosotros",
@@ -196,7 +196,17 @@
         "title": "Trabajo respaldado",
         "body": "Si algo que hicimos falla pronto, regresamos y lo corregimos."
       }
-    ]
+    ],
+    "galleryEyebrow": "Desde la obra",
+    "galleryHeading": "Un vistazo al trabajo",
+    "galleryBody": "Algunas tomas de trabajos recientes — lo que heredamos, cómo lo entregamos y el detalle que no aparece en la factura.",
+    "galleryVideoTag": "Con el soplete",
+    "galleryCaptions": {
+      "complex": "Re-tubería multilínea — soldada, probada a presión y etiquetada",
+      "rough": "Cómo arranca un trabajo típico: la parte que no sale en el folleto",
+      "clean": "Instalación limpia, lista para el recorrido con el cliente",
+      "torch": "Soldando cobre en una visita de servicio"
+    }
   },
   "contact": {
     "heading": "Contacto",

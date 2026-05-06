@@ -162,7 +162,7 @@
     "citiesHeading": "Cities we commonly serve",
     "citiesNote": "List is illustrative, not exhaustive. Call with your address to confirm availability and same-day options.",
     "sendAddress": "Send your address",
-    "mapPlaceholder": "Map placeholder — drop in an embedded coverage map here."
+    "allAreas": "All service areas"
   },
   "about": {
     "heading": "About",
@@ -196,7 +196,17 @@
         "title": "Stand-behind work",
         "body": "If something we did fails early, we come back and make it right."
       }
-    ]
+    ],
+    "galleryEyebrow": "From the field",
+    "galleryHeading": "A look at the work",
+    "galleryBody": "A few shots from recent jobs — what we inherit, how we leave it, and the kind of detail work that doesn't make it onto an invoice.",
+    "galleryVideoTag": "On the torch",
+    "galleryCaptions": {
+      "complex": "Multi-line repipe — soldered, pressure-tested, and labeled",
+      "rough": "How a typical job starts: the part you don't see in the brochure",
+      "clean": "Clean install ready for the homeowner walk-through",
+      "torch": "Brazing copper on a service call"
+    }
   },
   "contact": {
     "heading": "Contact",
@@ -276,7 +286,7 @@
     "heading": "Real jobs, real results",
     "body": "A mix of finished installs, the rough conditions we sometimes inherit, and shots of how we keep work areas clean while jobs are in flight.",
     "bucketFinished": "Finished",
-    "bucketRough": "Rough jobs",
+    "bucketRough": "Tough jobs",
     "bucketClean": "Clean & professional",
     "placeholderNote": "Image placeholders — swap in real job-site photos under public/photos/.",
     "items": {

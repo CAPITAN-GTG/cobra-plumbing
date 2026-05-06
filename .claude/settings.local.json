@@ -17,7 +17,8 @@
       "Bash(curl -sS -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/contact)",
       "Bash(python -c 'from PIL import Image; import os *)",
       "Bash(identify \"Before 1.jpg\" \"After 2.jpg\")",
-      "PowerShell($names = @\\('Before 1.jpg','After 2.jpg','Home Page - Hero Section.jpg'\\); Add-Type -AssemblyName System.Drawing; foreach\\($n in $names\\){ $p = Join-Path 'public\\\\photos\\\\New Photos' $n; if\\(Test-Path $p\\){ $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $p\\)\\); \"$n  $\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\) } })"
+      "PowerShell($names = @\\('Before 1.jpg','After 2.jpg','Home Page - Hero Section.jpg'\\); Add-Type -AssemblyName System.Drawing; foreach\\($n in $names\\){ $p = Join-Path 'public\\\\photos\\\\New Photos' $n; if\\(Test-Path $p\\){ $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $p\\)\\); \"$n  $\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\) } })",
+      "PowerShell($shell = New-Object -ComObject Shell.Application; $folder = $shell.Namespace\\('E:\\\\GitHub\\\\cobra-plumbing\\\\public\\\\photos\\\\New Photos'\\); $f = $folder.ParseName\\('Blow Torch Clip.mp4'\\); for\\($i=0; $i -lt 320; $i++\\){ $name = $folder.GetDetailsOf\\($null, $i\\); $val = $folder.GetDetailsOf\\($f, $i\\); if\\($val -and \\($name -match 'dimen|height|width|frame'\\)\\){ \"{0,-30} {1}\" -f $name, $val } })"
     ]
   }
 }

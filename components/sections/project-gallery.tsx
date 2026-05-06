@@ -27,7 +27,7 @@ export async function ProjectGallery() {
 
         <div className="mb-8 flex flex-wrap justify-center gap-2">
           <span className="tag tag-warm">{t("gallery.bucketFinished")}</span>
-          <span className="tag">{t("gallery.bucketRough")}</span>
+          <span className="tag tag-warm">{t("gallery.bucketRough")}</span>
           <span className="tag tag-warm">{t("gallery.bucketClean")}</span>
         </div>
 
