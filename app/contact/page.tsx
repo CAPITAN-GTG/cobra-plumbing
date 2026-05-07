@@ -40,8 +40,8 @@ export default async function ContactPage() {
             <p className="text-pretty text-ink-muted">{t("contact.intro")}</p>
 
             <ul className="flex flex-col gap-4">
-              <li className="flex items-start gap-4 rounded-2xl border border-accent/15 bg-surface-card p-5">
-                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-warm-tint text-accent-warm">
+              <li className="flex items-start gap-4 border border-accent/15 bg-surface-card p-5">
+                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-warm-tint text-accent-warm">
                   <PiPhoneCallFill size={22} aria-hidden />
                 </span>
                 <div>
@@ -56,8 +56,8 @@ export default async function ContactPage() {
                   </a>
                 </div>
               </li>
-              <li className="flex items-start gap-4 rounded-2xl border border-accent/15 bg-surface-card p-5">
-                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-warm-tint text-accent-warm">
+              <li className="flex items-start gap-4 border border-accent/15 bg-surface-card p-5">
+                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-warm-tint text-accent-warm">
                   <PiClockFill size={22} aria-hidden />
                 </span>
                 <div>
@@ -67,8 +67,8 @@ export default async function ContactPage() {
                   <p className="text-sm text-ink">{t("contact.hoursBody")}</p>
                 </div>
               </li>
-              <li className="flex items-start gap-4 rounded-2xl border border-accent/15 bg-surface-card p-5">
-                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-warm-tint text-accent-warm">
+              <li className="flex items-start gap-4 border border-accent/15 bg-surface-card p-5">
+                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-warm-tint text-accent-warm">
                   <PiMapPinFill size={22} aria-hidden />
                 </span>
                 <div>
@@ -78,8 +78,8 @@ export default async function ContactPage() {
                   <p className="text-sm text-ink">{t("contact.mailBody")}</p>
                 </div>
               </li>
-              <li className="flex items-start gap-4 rounded-2xl border border-accent/15 bg-surface-card p-5">
-                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-warm-tint text-accent-warm">
+              <li className="flex items-start gap-4 border border-accent/15 bg-surface-card p-5">
+                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-warm-tint text-accent-warm">
                   <PiEnvelopeSimpleFill size={22} aria-hidden />
                 </span>
                 <div>

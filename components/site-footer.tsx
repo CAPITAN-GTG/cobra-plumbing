@@ -16,16 +16,16 @@ export async function SiteFooter() {
   const services = messages.services.groups.slice(0, 4);
 
   return (
-    <footer className="mt-auto bg-ink-deep text-white/85">
+    <footer className="mt-auto bg-accent-deep text-white/85">
       <div className="h-1 w-full bg-accent-warm" aria-hidden />
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-12 lg:px-8">
         <div className="flex flex-col gap-4">
           <Image
             src={LOGO_SRC}
             alt={BUSINESS_NAME}
-            width={180}
-            height={56}
-            className="h-12 w-auto brightness-0 invert"
+            width={1024}
+            height={1024}
+            className="h-24 w-auto brightness-0 invert"
           />
           <p className="text-sm leading-relaxed text-white/70">
             {t("footer.blurb", { business: BUSINESS_NAME })}

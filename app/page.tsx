@@ -4,7 +4,7 @@ import { CountersSection } from "@/components/sections/counters-section";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { Hero } from "@/components/sections/hero";
 import { ProcessStrip } from "@/components/sections/process-strip";
-import { ServicesGrid } from "@/components/sections/services-grid";
+import { ServicesTeaser } from "@/components/sections/services-teaser";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { getTranslator } from "@/lib/i18n/server";
 import { BUSINESS_NAME, PHONE_DISPLAY } from "@/lib/site";
@@ -30,8 +30,8 @@ export default async function HomePage() {
         subKey="hero.sub"
         imageSrc="/photos/New Photos/Home Page - Hero Section.jpg"
       />
-      <ServicesGrid />
       <CountersSection />
+      <ServicesTeaser />
       <ProcessStrip />
       <BeforeAfterSection />
       <TestimonialsSection />

@@ -16,7 +16,7 @@ export async function SiteHeader() {
         <li key={href}>
           <Link
             href={href}
-            className="inline-flex min-h-[44px] items-center rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-ink hover:text-accent-warm md:py-1.5"
+            className="inline-flex min-h-[44px] items-center px-3 py-2 text-sm font-semibold uppercase tracking-wider text-ink hover:text-accent-warm md:py-1.5"
           >
             {t(key)}
           </Link>
@@ -36,9 +36,9 @@ export async function SiteHeader() {
           <Image
             src={LOGO_SRC}
             alt=""
-            width={220}
-            height={70}
-            className="h-12 w-auto sm:h-14"
+            width={1024}
+            height={1024}
+            className="h-32 w-auto"
             priority
           />
         </Link>

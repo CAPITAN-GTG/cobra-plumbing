@@ -42,7 +42,7 @@ export function Testimonials({ eyebrow, heading, items }: TestimonialsProps) {
         >
           {items.map((it, i) => (
             <SwiperSlide key={i}>
-              <article className="flex h-full flex-col gap-4 rounded-2xl border border-accent/15 bg-surface-card p-6 sm:p-7">
+              <article className="flex h-full flex-col gap-4 border border-accent/15 bg-surface-card p-6 sm:p-7">
                 <PiQuotesFill
                   aria-hidden
                   size={32}

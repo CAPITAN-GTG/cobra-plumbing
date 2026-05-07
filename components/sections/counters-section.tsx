@@ -6,7 +6,6 @@ export async function CountersSection() {
 
   return (
     <Counters
-      eyebrow={t("counters.eyebrow")}
       heading={t("counters.heading")}
       stats={[
         { value: 20, suffix: "+", label: t("counters.years") },
