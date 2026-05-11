@@ -21,7 +21,6 @@ export async function ProcessStrip() {
     <section className="section bg-surface-tint">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-12 flex max-w-2xl flex-col items-center gap-3 text-center">
-          <span className="eyebrow">{t("process.eyebrow")}</span>
           <h2 className="heading-section">{t("process.heading")}</h2>
           <p className="text-pretty text-ink-muted">{t("process.lead")}</p>
         </div>

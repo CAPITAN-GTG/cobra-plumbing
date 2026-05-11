@@ -41,6 +41,7 @@ export function ServiceAreaMap({
 
   return (
     <>
+<<<<<<< HEAD
       <div className="flex flex-col gap-6">
         <button
           type="button"
@@ -106,6 +107,54 @@ export function ServiceAreaMap({
       </div>
 
       <div className="min-h-[400px] w-full overflow-hidden rounded-2xl border border-accent/20 shadow-md lg:sticky lg:top-24 lg:max-h-[80vh] lg:self-start">
+=======
+      <div className="flex flex-col gap-3">
+        <div className="flex flex-wrap items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setSelected(null)}
+            aria-pressed={selected === null}
+            className={`border px-3 py-1.5 text-xs font-bold uppercase tracking-widest transition ${
+              selected === null
+                ? "border-accent-warm bg-accent-warm text-white"
+                : "border-accent/30 bg-surface-card text-ink hover:border-accent-warm hover:text-accent-warm"
+            }`}
+          >
+            {defaultLabel}
+          </button>
+        </div>
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {cities.map((city) => {
+            const active = selected === city;
+            return (
+              <li key={city}>
+                <button
+                  type="button"
+                  onClick={() => setSelected(city)}
+                  aria-pressed={active}
+                  className={`card-tilt flex w-full items-center gap-2 border px-3 py-3 text-left text-sm transition ${
+                    active
+                      ? "border-accent-warm bg-warm-tint text-ink-deep"
+                      : "border-accent/15 bg-surface-card text-ink hover:border-accent-warm/60"
+                  }`}
+                >
+                  <PiMapPinFill
+                    aria-hidden
+                    size={16}
+                    className={`shrink-0 ${
+                      active ? "text-accent-warm-deep" : "text-accent-warm"
+                    }`}
+                  />
+                  <span>{city}</span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+        <p className="text-sm text-ink-muted">{citiesNote}</p>
+      </div>
+      <div className="min-h-[400px] w-full overflow-hidden border border-accent/20 shadow-md">
+>>>>>>> 7a87289fcbeb6bb27cc09432fdedbf7c7c34eec9
         <iframe
           key={query}
           title={`Cobra Plumbing coverage map — ${selected ?? defaultMapLabel}`}

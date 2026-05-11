@@ -31,7 +31,7 @@ export function MobileNav({ label, children }: MobileNavProps) {
         aria-label={label}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-accent/25 bg-surface-card text-ink hover:bg-accent/10 md:hidden"
+        className="inline-flex h-11 w-11 items-center justify-center border border-accent/25 bg-surface-card text-ink hover:bg-accent/10 md:hidden"
       >
         {open ? <PiX size={22} /> : <PiList size={22} />}
       </button>
@@ -42,7 +42,7 @@ export function MobileNav({ label, children }: MobileNavProps) {
         >
           <div className="absolute inset-0 bg-ink-deep/40 backdrop-blur-sm" />
           <div
-            className="absolute inset-x-3 top-20 rounded-2xl border border-accent/15 bg-surface-card p-5 shadow-2xl"
+            className="absolute inset-x-3 top-20 border border-accent/15 bg-surface-card p-5 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {children}

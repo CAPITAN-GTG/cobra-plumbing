@@ -5,7 +5,6 @@ import { getTranslator } from "@/lib/i18n/server";
 import { BUSINESS_NAME, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 
 type HeroProps = {
-  eyebrowKey?: string;
   titleKey: string;
   highlightKey?: string;
   subKey: string;
@@ -17,7 +16,6 @@ type HeroProps = {
 };
 
 export async function Hero({
-  eyebrowKey = "hero.eyebrow",
   titleKey,
   highlightKey,
   subKey,
@@ -47,7 +45,6 @@ export async function Hero({
         }`}
       >
         <div className="flex flex-col justify-center gap-6">
-          <span className="eyebrow">{t(eyebrowKey)}</span>
           <h1 className="heading-display">
             {t(titleKey, { business: BUSINESS_NAME })}{" "}
             {highlightKey ? (
@@ -72,7 +69,7 @@ export async function Hero({
         {isSplit ? (
           <div className="relative">
             {imageSrc ? (
-              <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl shadow-xl lg:aspect-[4/5]">
+              <div className="relative aspect-[5/4] w-full overflow-hidden shadow-xl lg:aspect-[4/5]">
                 <Image
                   src={imageSrc}
                   alt={t("hero.imageAlt")}

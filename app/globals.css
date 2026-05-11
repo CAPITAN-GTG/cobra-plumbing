@@ -2,16 +2,23 @@
 
 @theme {
   /* Surfaces */
-  --color-surface: #eef5fb;
+  --color-surface: #ffffff;
   --color-surface-card: #ffffff;
+<<<<<<< HEAD
   --color-surface-tint: rgba(106, 159, 208, 0.08);
   --color-warm-tint: rgba(37, 99, 235, 0.10);
+=======
+  --color-surface-tint: rgba(1, 164, 171, 0.08);
+  --color-warm-tint: rgba(227, 27, 41, 0.08);
+  --color-neutral: #c2c2c4;
+>>>>>>> 7a87289fcbeb6bb27cc09432fdedbf7c7c34eec9
 
   /* Ink */
-  --color-ink: #1e2a3a;
-  --color-ink-muted: #5c6b7d;
-  --color-ink-deep: #0f1a2b;
+  --color-ink: #020200;
+  --color-ink-muted: #5e5f5f;
+  --color-ink-deep: #020200;
 
+<<<<<<< HEAD
   /* Accents — paired blues to match the cobra mark.
      `accent` is the soft sky blue, `accent-warm` is the saturated brand blue
      used for primary CTAs, eyebrows, and highlight states. */
@@ -19,6 +26,13 @@
   --color-accent-deep: #4d84b8;
   --color-accent-warm: #2563eb;
   --color-accent-warm-deep: #1d4ed8;
+=======
+  /* Accents */
+  --color-accent: #01a4ab;
+  --color-accent-deep: #005b5e;
+  --color-accent-warm: #e31b29;
+  --color-accent-warm-deep: #eb1428;
+>>>>>>> 7a87289fcbeb6bb27cc09432fdedbf7c7c34eec9
 
   /* Type — Zalando Sans SemiExpanded is loaded from Google Fonts via
      <link> tags in `app/layout.tsx`. It's a variable font (axes 200–900
@@ -107,7 +121,7 @@ body {
       box-shadow 200ms ease, transform 200ms ease;
     background: var(--color-accent-deep);
     color: #fff;
-    box-shadow: 0 6px 18px -8px rgba(77, 132, 184, 0.55);
+    box-shadow: 0 6px 18px -8px rgba(0, 91, 94, 0.55);
   }
   .btn:hover {
     background: var(--color-ink-deep);
@@ -117,7 +131,11 @@ body {
   .btn-warm {
     background: var(--color-accent-warm);
     color: #fff;
+<<<<<<< HEAD
     box-shadow: 0 6px 18px -8px rgba(37, 99, 235, 0.55);
+=======
+    box-shadow: 0 6px 18px -8px rgba(227, 27, 41, 0.6);
+>>>>>>> 7a87289fcbeb6bb27cc09432fdedbf7c7c34eec9
   }
   .btn-warm:hover {
     background: var(--color-accent-warm-deep);
@@ -227,7 +245,7 @@ body {
   }
 
   .section-dark {
-    background: var(--color-ink-deep);
+    background: var(--color-accent-deep);
     color: #e6ecf3;
   }
   .section-dark h1,
@@ -258,7 +276,7 @@ body {
   }
   .card-tilt:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 40px -22px rgba(15, 26, 43, 0.35);
+    box-shadow: 0 18px 40px -22px rgba(2, 2, 0, 0.35);
   }
 
   /* Shimmery decorative blob for hero / section backgrounds */
@@ -275,7 +293,6 @@ body {
   .photo-slot {
     position: relative;
     overflow: hidden;
-    border-radius: 1.25rem;
     background: linear-gradient(
         135deg,
         color-mix(in oklab, var(--color-accent) 18%, white) 0%,

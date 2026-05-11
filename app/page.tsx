@@ -4,7 +4,7 @@ import { CountersSection } from "@/components/sections/counters-section";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { HeroParallax } from "@/components/sections/hero-parallax";
 import { ProcessStrip } from "@/components/sections/process-strip";
-import { ServicesGrid } from "@/components/sections/services-grid";
+import { ServicesTeaser } from "@/components/sections/services-teaser";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { getTranslator } from "@/lib/i18n/server";
 import { BUSINESS_NAME, PHONE_DISPLAY } from "@/lib/site";
@@ -24,9 +24,19 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function HomePage() {
   return (
     <>
+<<<<<<< HEAD
       <HeroParallax imageSrc="/photos/New Photos/20250801_151125.jpg" />
       <ServicesGrid />
+=======
+      <Hero
+        titleKey="hero.title"
+        highlightKey="hero.highlight"
+        subKey="hero.sub"
+        imageSrc="/photos/New Photos/Home Page - Hero Section.jpg"
+      />
+>>>>>>> 7a87289fcbeb6bb27cc09432fdedbf7c7c34eec9
       <CountersSection />
+      <ServicesTeaser />
       <ProcessStrip />
       <BeforeAfterSection />
       <TestimonialsSection />

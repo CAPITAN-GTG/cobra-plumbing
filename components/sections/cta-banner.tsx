@@ -6,7 +6,7 @@ type CtaBannerProps = {
   variant?: "warm" | "deep";
 };
 
-export async function CtaBanner({ variant = "warm" }: CtaBannerProps) {
+export async function CtaBanner({ variant = "deep" }: CtaBannerProps) {
   const { t } = await getTranslator();
 
   const isWarm = variant === "warm";
@@ -17,7 +17,7 @@ export async function CtaBanner({ variant = "warm" }: CtaBannerProps) {
         className={`relative ${
           isWarm
             ? "bg-gradient-to-r from-accent-warm to-accent-warm-deep"
-            : "bg-gradient-to-r from-ink-deep to-accent-deep"
+            : "bg-gradient-to-r from-accent-deep to-accent"
         }`}
       >
         <div

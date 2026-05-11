@@ -16,7 +16,7 @@ export async function SiteHeader() {
         <li key={href}>
           <Link
             href={href}
-            className="inline-flex min-h-[44px] items-center rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-ink hover:text-accent-warm md:py-1.5"
+            className="inline-flex min-h-[44px] items-center px-3 py-2 text-sm font-semibold uppercase tracking-wider text-ink hover:text-accent-warm md:py-1.5"
           >
             {t(key)}
           </Link>
@@ -36,10 +36,17 @@ export async function SiteHeader() {
           <Image
             src={LOGO_SRC}
             alt=""
+<<<<<<< HEAD
             width={120}
             height={120}
             className="h-11 w-11 rounded-lg sm:h-14 sm:w-14"
             preload
+=======
+            width={1024}
+            height={1024}
+            className="h-32 w-auto"
+            priority
+>>>>>>> 7a87289fcbeb6bb27cc09432fdedbf7c7c34eec9
           />
           <span className="hidden text-lg font-bold leading-tight tracking-tight text-ink-deep sm:inline-flex sm:flex-col">
             <span>{BUSINESS_NAME}</span>

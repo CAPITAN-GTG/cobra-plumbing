@@ -34,7 +34,11 @@ export function Counters({ stats, eyebrow, heading }: CountersProps) {
               key={s.label}
               className="flex flex-col items-center gap-2 text-center"
             >
+<<<<<<< HEAD
               <span className="text-4xl font-bold leading-none text-accent-warm sm:text-5xl lg:text-6xl">
+=======
+              <span className="text-5xl font-bold text-white sm:text-6xl">
+>>>>>>> 7a87289fcbeb6bb27cc09432fdedbf7c7c34eec9
                 {s.prefix}
                 {inView ? (
                   <CountUp end={s.value} duration={2.2} separator="," />

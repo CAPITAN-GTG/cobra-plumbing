@@ -18,7 +18,10 @@
       "Bash(python -c 'from PIL import Image; import os *)",
       "Bash(identify \"Before 1.jpg\" \"After 2.jpg\")",
       "PowerShell($names = @\\('Before 1.jpg','After 2.jpg','Home Page - Hero Section.jpg'\\); Add-Type -AssemblyName System.Drawing; foreach\\($n in $names\\){ $p = Join-Path 'public\\\\photos\\\\New Photos' $n; if\\(Test-Path $p\\){ $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $p\\)\\); \"$n  $\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\) } })",
-      "PowerShell($shell = New-Object -ComObject Shell.Application; $folder = $shell.Namespace\\('E:\\\\GitHub\\\\cobra-plumbing\\\\public\\\\photos\\\\New Photos'\\); $f = $folder.ParseName\\('Blow Torch Clip.mp4'\\); for\\($i=0; $i -lt 320; $i++\\){ $name = $folder.GetDetailsOf\\($null, $i\\); $val = $folder.GetDetailsOf\\($f, $i\\); if\\($val -and \\($name -match 'dimen|height|width|frame'\\)\\){ \"{0,-30} {1}\" -f $name, $val } })"
+      "PowerShell($shell = New-Object -ComObject Shell.Application; $folder = $shell.Namespace\\('E:\\\\GitHub\\\\cobra-plumbing\\\\public\\\\photos\\\\New Photos'\\); $f = $folder.ParseName\\('Blow Torch Clip.mp4'\\); for\\($i=0; $i -lt 320; $i++\\){ $name = $folder.GetDetailsOf\\($null, $i\\); $val = $folder.GetDetailsOf\\($f, $i\\); if\\($val -and \\($name -match 'dimen|height|width|frame'\\)\\){ \"{0,-30} {1}\" -f $name, $val } })",
+      "Bash(npx tsc *)",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $base = \"E:\\\\GitHub\\\\cobra-plumbing\\\\public\\\\photos\\\\New Photos\"; foreach \\($f in @\\(\"Rough Job.jpg\",\"Clean Work Example.jpg\",\"Complex Work.jpg\"\\)\\) { $img = [System.Drawing.Image]::FromFile\\(\"$base\\\\$f\"\\); \"{0}: {1}x{2}\" -f $f, $img.Width, $img.Height; $img.Dispose\\(\\) })",
+      "PowerShell($f = \"E:\\\\GitHub\\\\cobra-plumbing\\\\public\\\\photos\\\\New Photos\\\\Blow Torch Clip.mp4\"; \\(Get-Item $f\\).Length; $shell = New-Object -ComObject Shell.Application; $folder = $shell.Namespace\\(\\(Split-Path $f\\)\\); $file = $folder.ParseName\\(\\(Split-Path $f -Leaf\\)\\); for \\($i=0; $i -lt 320; $i++\\) { $name = $folder.GetDetailsOf\\($null, $i\\); $val = $folder.GetDetailsOf\\($file, $i\\); if \\($val -and \\($name -match 'dimension|frame|width|height|aspect'\\)\\) { \"$i `t$name`: $val\" } })"
     ]
   }
 }
