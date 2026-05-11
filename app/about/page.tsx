@@ -23,7 +23,6 @@ export default async function AboutPage() {
 
   return (
     <>
-<<<<<<< HEAD
       <section className="relative overflow-hidden bg-gradient-to-b from-surface to-surface-card">
         <div
           aria-hidden
@@ -75,8 +74,6 @@ export default async function AboutPage() {
         </div>
       </section>
 
-=======
->>>>>>> 7a87289fcbeb6bb27cc09432fdedbf7c7c34eec9
       <section className="section">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-12 flex max-w-2xl flex-col items-center gap-3 text-center">

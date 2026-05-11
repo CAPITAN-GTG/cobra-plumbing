@@ -4,35 +4,20 @@
   /* Surfaces */
   --color-surface: #ffffff;
   --color-surface-card: #ffffff;
-<<<<<<< HEAD
-  --color-surface-tint: rgba(106, 159, 208, 0.08);
-  --color-warm-tint: rgba(37, 99, 235, 0.10);
-=======
-  --color-surface-tint: rgba(1, 164, 171, 0.08);
-  --color-warm-tint: rgba(227, 27, 41, 0.08);
+  --color-surface-tint: rgba(37, 99, 235, 0.08);
+  --color-warm-tint: rgba(37, 99, 235, 0.12);
   --color-neutral: #c2c2c4;
->>>>>>> 7a87289fcbeb6bb27cc09432fdedbf7c7c34eec9
 
   /* Ink */
   --color-ink: #020200;
   --color-ink-muted: #5e5f5f;
   --color-ink-deep: #020200;
 
-<<<<<<< HEAD
-  /* Accents — paired blues to match the cobra mark.
-     `accent` is the soft sky blue, `accent-warm` is the saturated brand blue
-     used for primary CTAs, eyebrows, and highlight states. */
-  --color-accent: #6a9fd0;
-  --color-accent-deep: #4d84b8;
+  /* Accents */
+  --color-accent: #3b82f6;
+  --color-accent-deep: #1d4ed8;
   --color-accent-warm: #2563eb;
   --color-accent-warm-deep: #1d4ed8;
-=======
-  /* Accents */
-  --color-accent: #01a4ab;
-  --color-accent-deep: #005b5e;
-  --color-accent-warm: #e31b29;
-  --color-accent-warm-deep: #eb1428;
->>>>>>> 7a87289fcbeb6bb27cc09432fdedbf7c7c34eec9
 
   /* Type — Zalando Sans SemiExpanded is loaded from Google Fonts via
      <link> tags in `app/layout.tsx`. It's a variable font (axes 200–900
@@ -131,11 +116,7 @@ body {
   .btn-warm {
     background: var(--color-accent-warm);
     color: #fff;
-<<<<<<< HEAD
-    box-shadow: 0 6px 18px -8px rgba(37, 99, 235, 0.55);
-=======
     box-shadow: 0 6px 18px -8px rgba(227, 27, 41, 0.6);
->>>>>>> 7a87289fcbeb6bb27cc09432fdedbf7c7c34eec9
   }
   .btn-warm:hover {
     background: var(--color-accent-warm-deep);
@@ -183,29 +164,13 @@ body {
 
   /* Animated underline brush stroke (Hadiman has-line) */
   .has-line {
-    position: relative;
-    display: inline-block;
-  }
-  .has-line::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0.05em;
-    height: 0.35em;
-    width: 100%;
-    background: color-mix(in oklab, var(--color-accent-warm) 40%, transparent);
-    z-index: -1;
-    border-radius: 2px;
-    transform-origin: left;
-    animation: has-line-grow 900ms cubic-bezier(0.65, 0, 0.35, 1) 200ms both;
-  }
-  @keyframes has-line-grow {
-    from {
-      transform: scaleX(0);
-    }
-    to {
-      transform: scaleX(1);
-    }
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding-inline: 0.12em;
+    padding-block: 0.02em;
+    border-radius: 0.18em;
+    background: color-mix(in oklab, var(--color-accent) 38%, transparent);
   }
 
   .tag {
