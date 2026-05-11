@@ -5,22 +5,33 @@
   --color-surface: #eef5fb;
   --color-surface-card: #ffffff;
   --color-surface-tint: rgba(106, 159, 208, 0.08);
-  --color-warm-tint: rgba(255, 102, 0, 0.08);
+  --color-warm-tint: rgba(37, 99, 235, 0.10);
 
   /* Ink */
   --color-ink: #1e2a3a;
   --color-ink-muted: #5c6b7d;
   --color-ink-deep: #0f1a2b;
 
-  /* Accents */
+  /* Accents — paired blues to match the cobra mark.
+     `accent` is the soft sky blue, `accent-warm` is the saturated brand blue
+     used for primary CTAs, eyebrows, and highlight states. */
   --color-accent: #6a9fd0;
   --color-accent-deep: #4d84b8;
-  --color-accent-warm: #ff6600;
-  --color-accent-warm-deep: #e55a00;
+  --color-accent-warm: #2563eb;
+  --color-accent-warm-deep: #1d4ed8;
 
-  /* Type */
-  --font-sans: var(--font-oxygen), system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  /* Type — Zalando Sans SemiExpanded is loaded from Google Fonts via
+     <link> tags in `app/layout.tsx`. It's a variable font (axes 200–900
+     across normal & italic) with a slightly wider letterform that reads
+     as confident and modern for service brands. */
+  --font-sans: "Zalando Sans SemiExpanded", system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    font-optical-sizing: auto;
+  }
 }
 
 *,
@@ -106,7 +117,7 @@ body {
   .btn-warm {
     background: var(--color-accent-warm);
     color: #fff;
-    box-shadow: 0 6px 18px -8px rgba(255, 102, 0, 0.6);
+    box-shadow: 0 6px 18px -8px rgba(37, 99, 235, 0.55);
   }
   .btn-warm:hover {
     background: var(--color-accent-warm-deep);
@@ -293,7 +304,7 @@ body {
   }
 }
 
-/* Swiper pagination accent override (orange dots) */
+/* Swiper pagination accent override (brand blue dots) */
 .swiper-pagination-bullet-active {
   background: var(--color-accent-warm) !important;
 }

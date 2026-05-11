@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { BeforeAfterSection } from "@/components/sections/before-after-section";
 import { CountersSection } from "@/components/sections/counters-section";
 import { CtaBanner } from "@/components/sections/cta-banner";
-import { Hero } from "@/components/sections/hero";
+import { HeroParallax } from "@/components/sections/hero-parallax";
 import { ProcessStrip } from "@/components/sections/process-strip";
 import { ServicesGrid } from "@/components/sections/services-grid";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
@@ -24,12 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function HomePage() {
   return (
     <>
-      <Hero
-        titleKey="hero.title"
-        highlightKey="hero.highlight"
-        subKey="hero.sub"
-        imageSrc="/photos/New Photos/Home Page - Hero Section.jpg"
-      />
+      <HeroParallax imageSrc="/photos/New Photos/20250801_151125.jpg" />
       <ServicesGrid />
       <CountersSection />
       <ProcessStrip />

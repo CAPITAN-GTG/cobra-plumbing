@@ -20,60 +20,67 @@
   },
   "footer": {
     "copyright": "© {year} {business}. Todos los derechos reservados.",
-    "blurb": "{business} es un plomero con licencia del Valle de San Fernando que atiende a propietarios y negocios con respuesta el mismo día y emergencias.",
+    "blurb": "{business} es una compañía de plomería con licencia, afianzada y asegurada que atiende el Valle de San Fernando, el condado de LA, el condado de Orange, el condado de Ventura y áreas cercanas. Residencial, comercial, industrial y nueva construcción — disponible 24/7 para emergencias.",
     "quickLinks": "Enlaces rápidos",
     "servicesHeading": "Servicios",
     "contactHeading": "Contáctenos",
-    "serviceAreaLine": "Atendemos el Valle de San Fernando y el condado de Los Ángeles cercano",
+    "serviceAreaLine": "Atendemos los condados de SFV, LA, Orange y Ventura — emergencias 24/7",
     "emailCta": "Envíenos un mensaje",
     "licenseLine": "Con licencia · Afianzado · Asegurado"
   },
   "meta": {
     "root": {
-      "description": "Plomería con licencia para hogares y negocios. Desagües, calentadores, fugas y emergencias. Llame para servicio."
+      "description": "Plomería con licencia, afianzada y asegurada para residencial, comercial, industrial y nueva construcción. Respuesta 24/7 en los condados de LA, Orange y Ventura. Llame para servicio."
     },
     "home": {
       "title": "Inicio",
-      "description": "{business} ofrece plomería confiable en el Valle de San Fernando y el condado de Los Ángeles. Llame al {phone}."
+      "description": "{business} — plomería residencial, comercial, industrial y de nueva construcción en SFV, LA, Orange y Ventura. Emergencias 24/7. Llame al {phone}."
     },
     "services": {
       "title": "Servicios",
-      "description": "Servicios de plomería de {business}: desagües, calentadores, fugas, accesorios y más. {phone}."
+      "description": "Servicio, reparación e instalación de plomería de {business}: desagües, calentadores, fugas, accesorios, gas y comercial — emergencias 24/7. {phone}."
     },
     "serviceAreas": {
       "title": "Zonas de servicio",
-      "description": "{business} atiende el Valle de San Fernando y comunidades cercanas del condado de Los Ángeles. Llame al {phone}."
+      "description": "{business} atiende el Valle de San Fernando y los condados de LA, Orange y Ventura — respuesta 24/7. Llame al {phone}."
     },
     "about": {
       "title": "Nosotros",
-      "description": "Conozca cómo {business} trabaja con propietarios y negocios. {phone}."
+      "description": "Conozca cómo {business} atiende clientes residenciales, comerciales, industriales y de nueva construcción en los condados de LA, Orange y Ventura. {phone}."
     },
     "contact": {
       "title": "Contacto",
-      "description": "Contacte a {business} por teléfono o correo. {phone}."
+      "description": "Contacte a {business} — línea de emergencia 24/7. Residencial, comercial, industrial, nueva construcción. {phone}."
     }
   },
   "hero": {
     "eyebrow": "Plomeros locales de confianza",
-    "title": "Plomería bien hecha —",
-    "highlight": "a la primera.",
-    "sub": "Plomería residencial y comercial en el Valle de San Fernando. Estimados claros, obra ordenada y citas el mismo día cuando hay disponibilidad.",
+    "title": "Sienta la diferencia de la verdadera",
+    "highlight": "artesanía cerca de usted.",
+    "sub": "Plomería residencial, comercial, industrial y de nueva construcción — servicio, reparación e instalación. Estimados claros, citas el mismo día cuando hay disponibilidad y respuesta 24/7 en los condados del Valle de San Fernando, LA, Orange y Ventura.",
     "primaryCta": "Solicitar cotización",
     "imageLabel": "Trabajo terminado",
     "imageLabelInset": "En obra",
     "imageAlt": "Foto de plomería terminada — marcador hasta agregar foto real",
     "imageAltInset": "Foto del plomero trabajando — marcador",
+    "scrollHint": "Desplácese para ver servicios",
+    "trust": {
+      "licensed": "Con licencia, afianzado y asegurado",
+      "experience": "10+ años de experiencia",
+      "sameDay": "Emergencia 24/7",
+      "rated": "Calificación 5 estrellas"
+    },
     "aboutTitle": "Nosotros",
     "aboutSub": "Cómo manejamos las obras, comunicamos y mantenemos su propiedad limpia desde la llegada hasta la limpieza.",
     "servicesTitle": "Nuestros servicios",
-    "servicesSub": "Desde una llave goteando hasta una re-tubería completa — manejamos plomería para hogares y negocios.",
+    "servicesSub": "Servicio, reparación e instalación para residencial, comercial, industrial y nueva construcción — desde una llave goteando hasta una re-tubería completa.",
     "areasTitle": "Dónde trabajamos",
-    "areasSub": "Con base en el 818, cubrimos el Valle de San Fernando y comunidades cercanas del condado de Los Ángeles.",
+    "areasSub": "Con base en el 818, cubrimos el Valle de San Fernando y los condados de LA, Orange y Ventura — respuesta 24/7 para emergencias.",
     "contactTitle": "Contacto",
-    "contactSub": "Llame ahora o envíe un mensaje — respondemos rápido y cotizamos con claridad."
+    "contactSub": "Llame ahora o envíe un mensaje — respondemos rápido y cotizamos con claridad. Línea de emergencia 24/7."
   },
   "home": {
-    "tagline": "Plomería residencial y comercial con comunicación clara y trabajo cuidadoso. Citas el mismo día y emergencias cuando haya disponibilidad.",
+    "tagline": "Plomería residencial, comercial, industrial y de nueva construcción con comunicación clara y trabajo cuidadoso. Respuesta 24/7 en los condados de LA, Orange y Ventura.",
     "callCta": "Llamar {phone}",
     "contactForm": "Formulario de contacto",
     "servicesHeading": "En qué podemos ayudar",
@@ -87,13 +94,13 @@
     ],
     "servicesLink": "Lista completa de servicios",
     "areasHeading": "Dónde trabajamos",
-    "areasBody": "Con base en el 818, atendemos con frecuencia el Valle de San Fernando y comunidades cercanas del condado de Los Ángeles.",
+    "areasBody": "Con base en el 818, atendemos con frecuencia el Valle de San Fernando y los condados de LA, Orange y Ventura — 24/7 para emergencias.",
     "areasLink": "Zonas de servicio"
   },
   "services": {
     "heading": "Servicios",
     "eyebrow": "Lo que hacemos",
-    "lead": "El alcance y el precio se confirman en sitio o tras fotos y una breve consulta por teléfono. Si no somos la mejor opción, se lo decimos pronto.",
+    "lead": "Servicio, reparación e instalación para residencial, comercial, industrial y nueva construcción. El alcance y el precio se confirman en sitio o tras fotos y una breve consulta por teléfono — si no somos la mejor opción, se lo decimos pronto.",
     "footnote": "No todo el trabajo está disponible en cada jurisdicción. Permisos, inspecciones y oficios especializados se coordinan según se requiera.",
     "requestService": "Solicitar servicio",
     "cardCta": "Más información",
@@ -158,15 +165,21 @@
   },
   "serviceAreas": {
     "heading": "Zonas de servicio",
-    "lead": "El despacho está centrado en el Valle de San Fernando (818). Ciudades cercanas del condado de Los Ángeles suelen estar disponibles; tiempos de traslado largos pueden afectar ventanas de agenda.",
+    "lead": "El despacho está centrado en el Valle de San Fernando (818). También atendemos con frecuencia los condados de LA, Orange y Ventura, además de áreas cercanas. Respuesta 24/7 — llame en cualquier momento.",
     "citiesHeading": "Ciudades que atendemos con frecuencia",
-    "citiesNote": "La lista es ilustrativa, no exhaustiva. Llame con su dirección para confirmar disponibilidad y opciones el mismo día.",
+    "citiesNote": "La lista es ilustrativa, no exhaustiva. Atendemos los condados de LA, Orange y Ventura — llame con su dirección para confirmar disponibilidad y opciones el mismo día.",
     "sendAddress": "Enviar su dirección",
-    "allAreas": "Todas las zonas"
+    "allAreas": "Todas las zonas",
+    "regions": {
+      "sfv": "Valle de San Fernando",
+      "la": "Condado de Los Ángeles",
+      "orange": "Condado de Orange",
+      "ventura": "Condado de Ventura"
+    }
   },
   "about": {
     "heading": "Nosotros",
-    "intro": "{business} se enfoca en citas predecibles, obra ordenada y opciones explicadas en lenguaje sencillo antes de comenzar.",
+    "intro": "{business} es una compañía de plomería con licencia, afianzada y asegurada que atiende clientes residenciales, comerciales, industriales y de nueva construcción. Nos enfocamos en citas predecibles, obra ordenada y opciones explicadas en lenguaje sencillo antes de comenzar — con respuesta 24/7 cuando hay emergencias.",
     "valuesHeading": "Cómo trabajamos",
     "values": [
       "Estimados por escrito cuando el alcance lo permite",
@@ -210,13 +223,13 @@
   },
   "contact": {
     "heading": "Contacto",
-    "intro": "La respuesta más rápida es una llamada. Para preguntas no urgentes, el formulario en esta página llega a nosotros por correo.",
+    "intro": "La respuesta más rápida es una llamada — nuestra línea está atendida 24/7 para emergencias de plomería. Para preguntas no urgentes, el formulario en esta página llega a nosotros por correo.",
     "phoneHeading": "Teléfono",
-    "hoursHeading": "Horario (pendiente)",
-    "hoursBody": "Reemplace con horario real de despacho y política de emergencias. Si ofrece emergencias 24/7, indique cómo se cotizan tarifas fuera de horario.",
-    "mailHeading": "Correo (pendiente)",
-    "mailBody": "Agregue dirección postal o apartado para clientes y proveedores. Mantenerlo aparte del bloque de teléfono preserva el diseño cuando apliquen marca.",
-    "note": "{business} — respuesta rápida en trabajos de plomería reales. El formulario abajo llega directo a nuestro buzón.",
+    "hoursHeading": "Horario",
+    "hoursBody": "Atendemos llamadas las 24 horas del día, los 7 días de la semana para emergencias de plomería. Las llamadas fuera de horario y fines de semana incluyen un recargo de emergencia — se lo cotizaremos antes de despachar.",
+    "mailHeading": "Zona de servicio",
+    "mailBody": "Atendemos el Valle de San Fernando, condado de LA, condado de Orange, condado de Ventura y áreas cercanas. Residencial, comercial, industrial y nueva construcción.",
+    "note": "{business} — respuesta 24/7 en trabajos de plomería reales. El formulario abajo llega directo a nuestro buzón.",
     "form": {
       "heading": "Enviar un mensaje",
       "lead": "Cuéntenos qué pasa. Fotos, dirección y una breve descripción nos ayudan a cotizar más rápido.",
@@ -263,12 +276,12 @@
     "years": "Años en el oficio",
     "jobs": "Trabajos completados",
     "response": "Respuesta de emergencia",
-    "licensed": "Con licencia y seguro"
+    "licensed": "Con licencia, afianzado y asegurado"
   },
   "cta": {
     "eyebrow": "¿Necesita un plomero ya?",
     "heading": "Tubería rota, sin agua caliente, desagüe tapado — llámenos.",
-    "body": "Visitas el mismo día cuando hay disponibilidad. Atención humana real en horario laboral."
+    "body": "Respuesta 24/7. Visitas el mismo día cuando hay disponibilidad. Atención humana real — llámenos en los condados de SFV, LA, Orange y Ventura."
   },
   "beforeAfter": {
     "eyebrow": "Antes y después",

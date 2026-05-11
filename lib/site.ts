@@ -4,8 +4,8 @@ export const SITE_URL =
 
 export const BUSINESS_NAME = "Cobra Plumbing";
 
-/** Public path to the site logo (see `public/logo.png`). */
-export const LOGO_SRC = "/logo.png";
+/** Public path to the site logo (see `public/logo.jpg`). Square 1:1 aspect ratio. */
+export const LOGO_SRC = "/logo.jpg";
 
 export const PHONE_DISPLAY = "(818) 373-9407";
 

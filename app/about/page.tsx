@@ -35,9 +35,10 @@ export default async function AboutPage() {
         <div className="relative mx-auto grid w-full max-w-7xl gap-12 px-4 py-12 sm:px-6 sm:py-14 md:py-16 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16 lg:px-8">
           <div className="flex flex-col gap-6">
             <span className="eyebrow">{t("hero.eyebrow")}</span>
-            <h1 className="heading-display">
+            <h1 className="heading-display">{t("about.heading")}</h1>
+            <p className="max-w-xl text-pretty text-lg text-ink-muted sm:text-xl">
               {t("about.intro", { business: BUSINESS_NAME })}
-            </h1>
+            </p>
             <div className="flex flex-col gap-4 text-ink-muted">
               <h3 className="text-lg font-bold text-ink-deep">
                 {t("about.valuesHeading")}

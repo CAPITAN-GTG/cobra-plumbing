@@ -20,60 +20,67 @@
   },
   "footer": {
     "copyright": "© {year} {business}. All rights reserved.",
-    "blurb": "{business} is a licensed San Fernando Valley plumber serving homeowners and businesses with same-day and emergency response.",
+    "blurb": "{business} is a licensed, bonded, and insured plumbing company serving the San Fernando Valley, LA County, Orange County, Ventura County, and surrounding areas. Residential, commercial, industrial, and new construction — available 24/7 for emergencies.",
     "quickLinks": "Quick links",
     "servicesHeading": "Services",
     "contactHeading": "Get in touch",
-    "serviceAreaLine": "Serving the San Fernando Valley & nearby LA County",
+    "serviceAreaLine": "Serving SFV, LA, Orange & Ventura counties — 24/7 emergency response",
     "emailCta": "Send us a message",
     "licenseLine": "Licensed · Bonded · Insured"
   },
   "meta": {
     "root": {
-      "description": "Licensed plumbing for homes and businesses. Drains, water heaters, leaks, and emergencies. Call for service."
+      "description": "Licensed, bonded & insured plumbing for residential, commercial, industrial, and new construction. 24/7 emergency response across LA, Orange & Ventura counties. Call for service."
     },
     "home": {
       "title": "Home",
-      "description": "{business} provides reliable plumbing across the San Fernando Valley and Los Angeles County. Call {phone}."
+      "description": "{business} — residential, commercial, industrial & new construction plumbing across SFV, LA, Orange & Ventura counties. 24/7 emergency. Call {phone}."
     },
     "services": {
       "title": "Services",
-      "description": "Plumbing services from {business}: drains, water heaters, leaks, fixtures, and more. {phone}."
+      "description": "Service, repair, and installation from {business}: drains, water heaters, leaks, fixtures, gas, and commercial — 24/7 emergency response. {phone}."
     },
     "serviceAreas": {
       "title": "Service areas",
-      "description": "{business} serves the San Fernando Valley and nearby Los Angeles County. Call {phone}."
+      "description": "{business} serves the San Fernando Valley plus LA, Orange, and Ventura counties — 24/7 emergency response. Call {phone}."
     },
     "about": {
       "title": "About",
-      "description": "Learn how {business} works with homeowners and businesses. {phone}."
+      "description": "Learn how {business} serves residential, commercial, industrial, and new construction clients across LA, Orange & Ventura counties. {phone}."
     },
     "contact": {
       "title": "Contact",
-      "description": "Contact {business} by phone or mail. {phone}."
+      "description": "Contact {business} — 24/7 emergency line. Residential, commercial, industrial, new construction. {phone}."
     }
   },
   "hero": {
     "eyebrow": "Trusted local plumbers",
-    "title": "Plumbing done right —",
-    "highlight": "the first time.",
-    "sub": "Residential and commercial plumbing across the San Fernando Valley. Clear estimates, tidy job sites, and same-day scheduling when available.",
+    "title": "Experience the difference of real",
+    "highlight": "craftsmanship near you.",
+    "sub": "Residential, commercial, industrial, and new construction plumbing — service, repair, and installation. Clear estimates, same-day scheduling when available, and 24/7 emergency response across the San Fernando Valley, LA, Orange, and Ventura counties.",
     "primaryCta": "Get a free quote",
     "imageLabel": "Finished work",
     "imageLabelInset": "On the job",
     "imageAlt": "Photo of completed plumbing work — placeholder until real photo is added",
     "imageAltInset": "Photo of plumber at work — placeholder",
+    "scrollHint": "Scroll to see services",
+    "trust": {
+      "licensed": "Licensed, Bonded & Insured",
+      "experience": "10+ Years Experience",
+      "sameDay": "24/7 Emergency Service",
+      "rated": "5-Star Rated"
+    },
     "aboutTitle": "About",
     "aboutSub": "How we run jobs, communicate, and keep your property clean from arrival to clean-up.",
     "servicesTitle": "Our services",
-    "servicesSub": "From a leaky faucet to a full repipe — we handle plumbing for homes and businesses.",
+    "servicesSub": "Service, repair, and installation for residential, commercial, industrial, and new construction — from a leaky faucet to a full repipe.",
     "areasTitle": "Where we work",
-    "areasSub": "Based in the 818, we cover the San Fernando Valley and nearby Los Angeles County communities.",
+    "areasSub": "Based in the 818, we cover the San Fernando Valley plus LA, Orange, and Ventura counties — 24/7 emergency response.",
     "contactTitle": "Contact",
-    "contactSub": "Call now or send a message — we respond fast and quote clearly."
+    "contactSub": "Call now or send a message — we respond fast and quote clearly. 24/7 emergency line."
   },
   "home": {
-    "tagline": "Residential and commercial plumbing with clear communication and careful work. Same-day and emergency scheduling when available.",
+    "tagline": "Residential, commercial, industrial, and new construction plumbing with clear communication and careful work. 24/7 emergency response across LA, Orange, and Ventura counties.",
     "callCta": "Call {phone}",
     "contactForm": "Contact form",
     "servicesHeading": "What we handle",
@@ -87,13 +94,13 @@
     ],
     "servicesLink": "Full services list",
     "areasHeading": "Where we work",
-    "areasBody": "Based in the 818 area, we routinely serve the San Fernando Valley and nearby Los Angeles County communities.",
+    "areasBody": "Based in the 818 area, we routinely serve the San Fernando Valley plus LA, Orange, and Ventura counties — 24/7 for emergencies.",
     "areasLink": "Service areas"
   },
   "services": {
     "heading": "Services",
     "eyebrow": "What we do",
-    "lead": "Scope and pricing are confirmed on site or after photos and a short phone consult. If we are not the right fit, we say so early.",
+    "lead": "Service, repair, and installation for residential, commercial, industrial, and new construction. Scope and pricing are confirmed on site or after photos and a short phone consult — if we are not the right fit, we say so early.",
     "footnote": "Not all work is available in every jurisdiction. Permits, inspections, and specialty trades are coordinated as required.",
     "requestService": "Request service",
     "cardCta": "Learn more",
@@ -158,15 +165,21 @@
   },
   "serviceAreas": {
     "heading": "Service areas",
-    "lead": "Dispatch is centered on the San Fernando Valley (818). Nearby Los Angeles County cities are often available; longer drive times may affect scheduling windows.",
+    "lead": "Dispatch is centered on the San Fernando Valley (818). We routinely cover LA, Orange, and Ventura counties as well, plus surrounding areas. 24/7 emergency response — call any time.",
     "citiesHeading": "Cities we commonly serve",
-    "citiesNote": "List is illustrative, not exhaustive. Call with your address to confirm availability and same-day options.",
+    "citiesNote": "List is illustrative, not exhaustive. We routinely serve LA, Orange, and Ventura counties — call with your address to confirm availability and same-day options.",
     "sendAddress": "Send your address",
-    "allAreas": "All service areas"
+    "allAreas": "All service areas",
+    "regions": {
+      "sfv": "San Fernando Valley",
+      "la": "Los Angeles County",
+      "orange": "Orange County",
+      "ventura": "Ventura County"
+    }
   },
   "about": {
     "heading": "About",
-    "intro": "{business} focuses on predictable scheduling, tidy job sites, and options explained in plain language before work begins.",
+    "intro": "{business} is a licensed, bonded, and insured plumbing company serving residential, commercial, industrial, and new construction clients. We focus on predictable scheduling, tidy job sites, and options explained in plain language before work begins — with 24/7 response when emergencies strike.",
     "valuesHeading": "How we operate",
     "values": [
       "Written estimates when scope allows",
@@ -210,13 +223,13 @@
   },
   "contact": {
     "heading": "Contact",
-    "intro": "Fastest response is a phone call. For non-urgent questions, the form on this page reaches us by email.",
+    "intro": "Fastest response is a phone call — our line is staffed 24/7 for plumbing emergencies. For non-urgent questions, the form on this page reaches us by email.",
     "phoneHeading": "Phone",
-    "hoursHeading": "Hours placeholder",
-    "hoursBody": "Replace with real dispatch hours and emergency policy. If you offer 24/7 emergency, state how after-hours fees are quoted.",
-    "mailHeading": "Mail placeholder",
-    "mailBody": "Add a mailing address or P.O. box for customers and vendors. Keeping this separate from the phone block preserves layout when the design team applies branding.",
-    "note": "{business} — fast response on real plumbing jobs. The form below sends straight to our dispatch inbox.",
+    "hoursHeading": "Hours",
+    "hoursBody": "We answer calls 24 hours a day, 7 days a week for plumbing emergencies. After-hours and weekend response carries an emergency surcharge — we'll quote it before we roll a truck.",
+    "mailHeading": "Service area",
+    "mailBody": "Serving the San Fernando Valley, LA County, Orange County, Ventura County, and surrounding areas. Residential, commercial, industrial, and new construction.",
+    "note": "{business} — 24/7 response on real plumbing jobs. The form below sends straight to our dispatch inbox.",
     "form": {
       "heading": "Send a message",
       "lead": "Tell us what's going on. Photos, addresses, and a short description help us quote faster.",
@@ -263,12 +276,12 @@
     "years": "Years in business",
     "jobs": "Jobs completed",
     "response": "Emergency response",
-    "licensed": "Licensed & insured"
+    "licensed": "Licensed, bonded & insured"
   },
   "cta": {
     "eyebrow": "Need a plumber now?",
     "heading": "Burst pipe, no hot water, backed-up drain — call us.",
-    "body": "Same-day visits when available. Real humans answering during business hours."
+    "body": "24/7 emergency response. Same-day visits when available. Real humans answering — call us across SFV, LA, Orange & Ventura counties."
   },
   "beforeAfter": {
     "eyebrow": "Before & after",

@@ -28,13 +28,13 @@ export function Counters({ stats, eyebrow, heading }: CountersProps) {
             {heading ? <h2 className="heading-section">{heading}</h2> : null}
           </div>
         )}
-        <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4">
           {stats.map((s) => (
             <li
               key={s.label}
               className="flex flex-col items-center gap-2 text-center"
             >
-              <span className="text-5xl font-bold text-accent-warm sm:text-6xl">
+              <span className="text-4xl font-bold leading-none text-accent-warm sm:text-5xl lg:text-6xl">
                 {s.prefix}
                 {inView ? (
                   <CountUp end={s.value} duration={2.2} separator="," />
@@ -43,7 +43,7 @@ export function Counters({ stats, eyebrow, heading }: CountersProps) {
                 )}
                 {s.suffix}
               </span>
-              <span className="text-sm uppercase tracking-widest text-white/70">
+              <span className="text-xs uppercase tracking-widest text-white/70 sm:text-sm">
                 {s.label}
               </span>
             </li>

@@ -31,16 +31,22 @@ export async function SiteHeader() {
         <Link
           href="/"
           aria-label={`${BUSINESS_NAME} — ${t("nav.home")}`}
-          className="inline-flex shrink-0 items-center"
+          className="inline-flex shrink-0 items-center gap-3"
         >
           <Image
             src={LOGO_SRC}
             alt=""
-            width={220}
-            height={70}
-            className="h-12 w-auto sm:h-14"
-            priority
+            width={120}
+            height={120}
+            className="h-11 w-11 rounded-lg sm:h-14 sm:w-14"
+            preload
           />
+          <span className="hidden text-lg font-bold leading-tight tracking-tight text-ink-deep sm:inline-flex sm:flex-col">
+            <span>{BUSINESS_NAME}</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-deep">
+              Sewer &amp; Drain
+            </span>
+          </span>
         </Link>
 
         <nav aria-label={t("aria.primaryNav")} className="ml-6 hidden md:block">

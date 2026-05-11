@@ -9,7 +9,7 @@ export async function CountersSection() {
       eyebrow={t("counters.eyebrow")}
       heading={t("counters.heading")}
       stats={[
-        { value: 20, suffix: "+", label: t("counters.years") },
+        { value: 10, suffix: "+", label: t("counters.years") },
         { value: 5000, suffix: "+", label: t("counters.jobs") },
         { value: 24, suffix: "/7", label: t("counters.response") },
         { value: 100, suffix: "%", label: t("counters.licensed") },

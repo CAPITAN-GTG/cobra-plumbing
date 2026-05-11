@@ -20,13 +20,23 @@ export async function SiteFooter() {
       <div className="h-1 w-full bg-accent-warm" aria-hidden />
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-12 lg:px-8">
         <div className="flex flex-col gap-4">
-          <Image
-            src={LOGO_SRC}
-            alt={BUSINESS_NAME}
-            width={180}
-            height={56}
-            className="h-12 w-auto brightness-0 invert"
-          />
+          <div className="flex items-center gap-3">
+            <Image
+              src={LOGO_SRC}
+              alt={BUSINESS_NAME}
+              width={120}
+              height={120}
+              className="h-14 w-14 rounded-lg"
+            />
+            <span className="flex flex-col leading-tight">
+              <span className="text-lg font-bold tracking-tight text-white">
+                {BUSINESS_NAME}
+              </span>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
+                Sewer &amp; Drain
+              </span>
+            </span>
+          </div>
           <p className="text-sm leading-relaxed text-white/70">
             {t("footer.blurb", { business: BUSINESS_NAME })}
           </p>

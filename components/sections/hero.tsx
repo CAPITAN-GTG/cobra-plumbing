@@ -77,7 +77,7 @@ export async function Hero({
                   src={imageSrc}
                   alt={t("hero.imageAlt")}
                   fill
-                  priority
+                  preload
                   sizes="(min-width: 1024px) 45vw, 100vw"
                   className="object-cover"
                 />
