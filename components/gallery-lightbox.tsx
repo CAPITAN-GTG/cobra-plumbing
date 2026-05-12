@@ -128,7 +128,6 @@ export function GalleryLightbox({ photos }: Props) {
 
           <div
             className="relative z-10 flex w-full max-w-6xl flex-col items-center px-16 py-8"
-            onClick={(e) => e.stopPropagation()}
           >
             <div
               className="relative w-full overflow-hidden"
