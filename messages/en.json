@@ -16,6 +16,7 @@
     "services": "Services",
     "serviceAreas": "Service areas",
     "about": "About",
+    "gallery": "Gallery",
     "contact": "Contact"
   },
   "footer": {
@@ -51,6 +52,10 @@
     "contact": {
       "title": "Contact",
       "description": "Contact {business} — 24/7 emergency line. Residential, commercial, industrial, new construction. {phone}."
+    },
+    "gallery": {
+      "title": "Gallery",
+      "description": "See real job-site photos from {business} — finished installs, tough conditions, and clean workmanship across LA, Orange & Ventura counties. {phone}."
     }
   },
   "hero": {

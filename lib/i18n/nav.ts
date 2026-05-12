@@ -4,6 +4,7 @@ export const NAV_ITEMS = [
   { href: "/services", key: "nav.services" as const },
   { href: "/service-areas", key: "nav.serviceAreas" as const },
   { href: "/about", key: "nav.about" as const },
+  { href: "/gallery", key: "nav.gallery" as const },
   { href: "/contact", key: "nav.contact" as const },
 ] as const;
 

@@ -21,7 +21,9 @@
       "PowerShell($shell = New-Object -ComObject Shell.Application; $folder = $shell.Namespace\\('E:\\\\GitHub\\\\cobra-plumbing\\\\public\\\\photos\\\\New Photos'\\); $f = $folder.ParseName\\('Blow Torch Clip.mp4'\\); for\\($i=0; $i -lt 320; $i++\\){ $name = $folder.GetDetailsOf\\($null, $i\\); $val = $folder.GetDetailsOf\\($f, $i\\); if\\($val -and \\($name -match 'dimen|height|width|frame'\\)\\){ \"{0,-30} {1}\" -f $name, $val } })",
       "Bash(npx tsc *)",
       "PowerShell(Add-Type -AssemblyName System.Drawing; $base = \"E:\\\\GitHub\\\\cobra-plumbing\\\\public\\\\photos\\\\New Photos\"; foreach \\($f in @\\(\"Rough Job.jpg\",\"Clean Work Example.jpg\",\"Complex Work.jpg\"\\)\\) { $img = [System.Drawing.Image]::FromFile\\(\"$base\\\\$f\"\\); \"{0}: {1}x{2}\" -f $f, $img.Width, $img.Height; $img.Dispose\\(\\) })",
-      "PowerShell($f = \"E:\\\\GitHub\\\\cobra-plumbing\\\\public\\\\photos\\\\New Photos\\\\Blow Torch Clip.mp4\"; \\(Get-Item $f\\).Length; $shell = New-Object -ComObject Shell.Application; $folder = $shell.Namespace\\(\\(Split-Path $f\\)\\); $file = $folder.ParseName\\(\\(Split-Path $f -Leaf\\)\\); for \\($i=0; $i -lt 320; $i++\\) { $name = $folder.GetDetailsOf\\($null, $i\\); $val = $folder.GetDetailsOf\\($file, $i\\); if \\($val -and \\($name -match 'dimension|frame|width|height|aspect'\\)\\) { \"$i `t$name`: $val\" } })"
+      "PowerShell($f = \"E:\\\\GitHub\\\\cobra-plumbing\\\\public\\\\photos\\\\New Photos\\\\Blow Torch Clip.mp4\"; \\(Get-Item $f\\).Length; $shell = New-Object -ComObject Shell.Application; $folder = $shell.Namespace\\(\\(Split-Path $f\\)\\); $file = $folder.ParseName\\(\\(Split-Path $f -Leaf\\)\\); for \\($i=0; $i -lt 320; $i++\\) { $name = $folder.GetDetailsOf\\($null, $i\\); $val = $folder.GetDetailsOf\\($file, $i\\); if \\($val -and \\($name -match 'dimension|frame|width|height|aspect'\\)\\) { \"$i `t$name`: $val\" } })",
+      "Bash(curl -s \"http://localhost:3000/gallery\")",
+      "Bash(curl -s \"http://localhost:3000\")"
     ]
   }
 }
