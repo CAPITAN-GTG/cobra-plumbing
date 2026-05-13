@@ -2,7 +2,7 @@
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.cobraplumbing.com";
 
-export const BUSINESS_NAME = "Cobra Plumbing";
+export const BUSINESS_NAME = "Cobra Sewer & Drain";
 
 /** Public path to the site logo (see `public/logo.jpg`). Square 1:1 aspect ratio. */
 export const LOGO_SRC = "/logo.jpg";

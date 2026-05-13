@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { PiMapPinFill } from "react-icons/pi";
+import { BUSINESS_NAME } from "@/lib/site";
 
 export type ServiceRegion = {
   /** Stable id used for React keys */
@@ -108,7 +109,7 @@ export function ServiceAreaMap({
       <div className="min-h-[400px] w-full overflow-hidden rounded-2xl border border-accent/20 shadow-md lg:sticky lg:top-24 lg:max-h-[80vh] lg:self-start">
         <iframe
           key={query}
-          title={`Cobra Plumbing coverage map — ${selected ?? defaultMapLabel}`}
+          title={`${BUSINESS_NAME} coverage map — ${selected ?? defaultMapLabel}`}
           src={buildSrc(query, zoom)}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

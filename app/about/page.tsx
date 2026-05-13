@@ -65,7 +65,7 @@ export default async function AboutPage() {
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-xl">
             <Image
               src={`${PHOTOS}/Stylish Photo.jpg`}
-              alt="Cobra Plumbing — finished work"
+              alt={`${BUSINESS_NAME} — finished work`}
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"

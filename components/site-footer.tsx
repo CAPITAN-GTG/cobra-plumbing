@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   PiEnvelopeSimpleFill,
-  PiMapPinFill,
   PiPhoneCallFill,
+  PiFacebookLogo,
+  PiInstagramLogo,
 } from "react-icons/pi";
 import { NAV_ITEMS } from "@/lib/i18n/nav";
 import { getTranslator } from "@/lib/i18n/server";
@@ -31,9 +32,6 @@ export async function SiteFooter() {
             <span className="flex flex-col leading-tight">
               <span className="text-lg font-bold tracking-tight text-white">
                 {BUSINESS_NAME}
-              </span>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
-                Sewer &amp; Drain
               </span>
             </span>
           </div>
@@ -80,37 +78,57 @@ export async function SiteFooter() {
               <PiPhoneCallFill
                 aria-hidden
                 size={18}
-                className="mt-0.5 shrink-0 text-accent-warm"
+                className="mt-0.5 shrink-0 text-white"
               />
               <a
                 href={`tel:${PHONE_TEL}`}
-                className="text-white/85 hover:text-accent-warm"
+                className="text-white/85 hover:text-white"
               >
                 {PHONE_DISPLAY}
               </a>
             </li>
             <li className="flex items-start gap-3">
-              <PiMapPinFill
-                aria-hidden
-                size={18}
-                className="mt-0.5 shrink-0 text-accent-warm"
-              />
-              <span className="text-white/70">
-                {t("footer.serviceAreaLine")}
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
               <PiEnvelopeSimpleFill
                 aria-hidden
                 size={18}
-                className="mt-0.5 shrink-0 text-accent-warm"
+                className="mt-0.5 shrink-0 text-white"
               />
-              <Link
-                href="/contact"
-                className="text-white/85 hover:text-accent-warm"
+              <a
+                href="mailto:cobrasewerndrain@gmail.com"
+                className="text-white/85 hover:text-white"
               >
-                {t("footer.emailCta")}
-              </Link>
+                cobrasewerndrain@gmail.com
+              </a>
+            </li>
+            <li className="flex items-start gap-3">
+              <PiFacebookLogo
+                aria-hidden
+                size={18}
+                className="mt-0.5 shrink-0 text-white"
+              />
+              <a
+                href="https://www.facebook.com/profile.php?id=61589234218208"
+                target="_blank"
+                rel="noreferrer"
+                className="text-white/85 hover:text-white"
+              >
+                Facebook
+              </a>
+            </li>
+            <li className="flex items-start gap-3">
+              <PiInstagramLogo
+                aria-hidden
+                size={18}
+                className="mt-0.5 shrink-0 text-white"
+              />
+              <a
+                href="https://www.instagram.com/cobrasewerndrain2026/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-white/85 hover:text-white"
+              >
+                Instagram
+              </a>
             </li>
           </ul>
         </div>
@@ -118,7 +136,17 @@ export async function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 px-4 py-5 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <p>{t("footer.copyright", { year, business: BUSINESS_NAME })}</p>
-          <p>{t("footer.licenseLine")}</p>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-end sm:gap-4">
+            <span className="text-white">{t("footer.licenseLine")}</span>
+            <a
+              href="https://grimo-dev.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              className="text-white hover:underline hover:underline-offset-4"
+            >
+              Powered by GrimoDev
+            </a>
+          </div>
         </div>
       </div>
     </footer>

@@ -73,6 +73,10 @@ export async function HeroParallax({
           <div className="flex w-full max-w-xl flex-col gap-6">
             <span className="eyebrow">{t(eyebrowKey)}</span>
 
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-ink-deep">
+              {BUSINESS_NAME}
+            </p>
+
             <h1 className="heading-display">
               {t(titleKey, { business: BUSINESS_NAME })}{" "}
               {highlightKey ? (

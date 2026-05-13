@@ -45,6 +45,9 @@ export async function Hero({
         }`}
       >
         <div className="flex flex-col justify-center gap-6">
+          <p className="text-sm font-bold uppercase tracking-[0.22em] text-ink-deep">
+            {BUSINESS_NAME}
+          </p>
           <h1 className="heading-display">
             {t(titleKey, { business: BUSINESS_NAME })}{" "}
             {highlightKey ? (

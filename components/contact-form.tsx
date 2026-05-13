@@ -37,7 +37,7 @@ export function ContactForm({ labels }: { labels: Labels }) {
       phone: String(fd.get("phone") ?? "").trim(),
       address: String(fd.get("address") ?? "").trim(),
       message: String(fd.get("message") ?? "").trim(),
-      website: String(fd.get("website") ?? ""),
+      fax: String(fd.get("fax") ?? ""),
     };
 
     if (!payload.name || !payload.email || !payload.message) {
@@ -60,7 +60,17 @@ export function ContactForm({ labels }: { labels: Labels }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      if (!res.ok) throw new Error("send_failed");
+      if (!res.ok) {
+        const data = (await res.json().catch(() => null)) as
+          | { error?: string }
+          | null;
+        if (res.status === 400 && data?.error === "invalid_input") {
+          setStatus("error");
+          setErrorMsg(labels.errorRequired);
+          return;
+        }
+        throw new Error("send_failed");
+      }
       setStatus("success");
       form.reset();
     } catch {
@@ -137,7 +147,7 @@ export function ContactForm({ labels }: { labels: Labels }) {
           {labels.honeypot}
           <input
             type="text"
-            name="website"
+            name="fax"
             tabIndex={-1}
             autoComplete="off"
           />

@@ -5,11 +5,11 @@ import { getMailRecipients, getTransporter } from "@/lib/mailer";
 const ContactSchema = z.object({
   name: z.string().min(1).max(120),
   email: z.string().email().max(160),
-  phone: z.string().max(40).optional().or(z.literal("")),
-  address: z.string().max(240).optional().or(z.literal("")),
-  message: z.string().min(5).max(4000),
-  // Honeypot — bots fill this; real users don't.
-  website: z.string().max(0).optional().or(z.literal("")),
+  phone: z.string().max(40).default(""),
+  address: z.string().max(240).default(""),
+  message: z.string().min(1).max(4000),
+  // Honeypot — must stay empty. Not named "website" (browsers autofill that).
+  fax: z.string().max(0).optional().or(z.literal("")),
 });
 
 export const runtime = "nodejs";
@@ -31,7 +31,7 @@ export async function POST(request: Request) {
   }
 
   // Honeypot tripped — pretend success so bots don't retry.
-  if (parsed.data.website && parsed.data.website.length > 0) {
+  if (parsed.data.fax && parsed.data.fax.length > 0) {
     return Response.json({ ok: true });
   }
 
@@ -41,11 +41,11 @@ export async function POST(request: Request) {
     const transporter = getTransporter();
     const { to, from } = getMailRecipients();
 
-    await transporter.sendMail({
+    const businessInquiry = transporter.sendMail({
       from: `"${BUSINESS_NAME} site" <${from}>`,
       to,
       replyTo: email,
-      subject: `New contact form — ${name}`,
+      subject: `New business inquiry — ${name}`,
       text: [
         `Name:    ${name}`,
         `Email:   ${email}`,
@@ -65,6 +65,34 @@ export async function POST(request: Request) {
         <p style="white-space:pre-wrap;font-family:system-ui;font-size:14px">${escapeHtml(message)}</p>
       `,
     });
+
+    const customerThanks = transporter.sendMail({
+      from: `"${BUSINESS_NAME}" <${from}>`,
+      to: email,
+      replyTo: to,
+      subject: `Thanks — we got your message`,
+      text: [
+        `Hi ${name},`,
+        "",
+        `Thanks for contacting ${BUSINESS_NAME}. We received your message and will get back to you as soon as possible.`,
+        "",
+        "For urgent issues, please call us.",
+        "",
+        `— ${BUSINESS_NAME}`,
+      ].join("\n"),
+      html: `
+        <p style="font-family:system-ui;font-size:14px">Hi ${escapeHtml(name)},</p>
+        <p style="font-family:system-ui;font-size:14px">
+          Thanks for contacting ${escapeHtml(BUSINESS_NAME)}. We received your message and will get back to you as soon as possible.
+        </p>
+        <p style="font-family:system-ui;font-size:14px">For urgent issues, please call us.</p>
+        <p style="font-family:system-ui;font-size:14px">— ${escapeHtml(
+          BUSINESS_NAME,
+        )}</p>
+      `,
+    });
+
+    await Promise.all([businessInquiry, customerThanks]);
 
     return Response.json({ ok: true });
   } catch (err) {

@@ -43,9 +43,6 @@ export async function SiteHeader() {
           />
           <span className="hidden text-lg font-bold leading-tight tracking-tight text-ink-deep sm:inline-flex sm:flex-col">
             <span>{BUSINESS_NAME}</span>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-deep">
-              Sewer &amp; Drain
-            </span>
           </span>
         </Link>
 
@@ -59,7 +56,7 @@ export async function SiteHeader() {
           </div>
           <a
             href={`tel:${PHONE_TEL}`}
-            className="btn btn-warm hidden sm:inline-flex"
+            className="btn btn-warm hidden whitespace-nowrap text-sm sm:inline-flex"
           >
             <PiPhoneCallFill aria-hidden size={18} />
             <span>{PHONE_DISPLAY}</span>
