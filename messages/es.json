@@ -16,6 +16,7 @@
     "services": "Servicios",
     "serviceAreas": "Zonas de servicio",
     "about": "Nosotros",
+    "gallery": "Galería",
     "contact": "Contacto"
   },
   "footer": {
@@ -51,6 +52,10 @@
     "contact": {
       "title": "Contacto",
       "description": "Contacte a {business} — línea de emergencia 24/7. Residencial, comercial, industrial, nueva construcción. {phone}."
+    },
+    "gallery": {
+      "title": "Galería",
+      "description": "Vea fotos reales de trabajos de {business} — instalaciones terminadas, condiciones difíciles y mano de obra limpia en los condados de LA, Orange y Ventura. {phone}."
     }
   },
   "hero": {
