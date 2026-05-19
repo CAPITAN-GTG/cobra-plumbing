@@ -286,6 +286,39 @@ body {
   }
 }
 
+/* Mobile menu — slide-in drawer + fade backdrop */
+@media (prefers-reduced-motion: no-preference) {
+  .mobile-menu-backdrop {
+    opacity: 0;
+    transition: opacity 320ms ease;
+  }
+  .mobile-menu-backdrop[data-state="open"] {
+    opacity: 1;
+  }
+  .mobile-menu-panel {
+    transform: translateX(100%);
+    transition: transform 320ms cubic-bezier(0.32, 0.72, 0, 1);
+    will-change: transform;
+  }
+  .mobile-menu-panel[data-state="open"] {
+    transform: translateX(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-backdrop {
+    opacity: 0;
+  }
+  .mobile-menu-backdrop[data-state="open"] {
+    opacity: 1;
+  }
+  .mobile-menu-panel {
+    transform: translateX(100%);
+  }
+  .mobile-menu-panel[data-state="open"] {
+    transform: translateX(0);
+  }
+}
+
 /* Swiper pagination accent override (brand blue dots) */
 .swiper-pagination-bullet-active {
   background: var(--color-accent-warm) !important;

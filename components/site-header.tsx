@@ -68,14 +68,21 @@ export async function SiteHeader() {
           >
             <PiPhoneCallFill aria-hidden size={18} />
           </a>
-          <MobileNav label={t("aria.primaryNav")}>
-            <div className="flex flex-col gap-4">
-              <nav aria-label={t("aria.primaryNav")}>{navList}</nav>
-              <div className="border-t border-accent/15 pt-4">
-                <LanguageSwitcher />
-              </div>
-            </div>
-          </MobileNav>
+          <MobileNav
+            navLabel={t("aria.primaryNav")}
+            menuTitle={t("aria.menu")}
+            openLabel={t("aria.openMenu")}
+            closeLabel={t("aria.closeMenu")}
+            items={NAV_ITEMS.map(({ href, key }) => ({
+              href,
+              label: t(key),
+            }))}
+            phoneDisplay={PHONE_DISPLAY}
+            phoneTel={PHONE_TEL}
+            callCta={t("home.callCta", { phone: PHONE_DISPLAY })}
+            languageLabel={t("aria.language")}
+            languageSwitcher={<LanguageSwitcher showLabels className="w-full" />}
+          />
         </div>
       </div>
     </header>

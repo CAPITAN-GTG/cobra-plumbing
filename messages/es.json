@@ -5,7 +5,10 @@
   "aria": {
     "primaryNav": "Principal",
     "footerNav": "Pie de página",
-    "language": "Idioma del sitio"
+    "language": "Idioma del sitio",
+    "menu": "Menú",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
   },
   "languageSwitcher": {
     "english": "Inglés",

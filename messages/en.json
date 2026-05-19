@@ -5,7 +5,10 @@
   "aria": {
     "primaryNav": "Primary",
     "footerNav": "Footer",
-    "language": "Site language"
+    "language": "Site language",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "languageSwitcher": {
     "english": "English",
